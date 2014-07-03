@@ -7,8 +7,12 @@
  */
 
 
-spl_autoload_register(function ($classname) {
-    include_once __DIR__ . '/../' . str_replace('\\', '/', $classname) . '.php';
-});
 
 require_once __DIR__ . '/../../vendor/autoload.php';
+
+/*set_include_path(__DIR__ . '/../' . PATH_SEPARATOR . get_include_path());
+
+spl_autoload_register(function ($classname) {
+    include_once  str_replace('\\', '/', $classname) . '.php';
+}, false, false);
+*/

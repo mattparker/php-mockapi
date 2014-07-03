@@ -7,7 +7,7 @@
             "get": [
                 {
                     "params": {},
-                    "return": {
+                    "response": {
                         "httpcode": 200,
                         "body": "hello"
                     }
