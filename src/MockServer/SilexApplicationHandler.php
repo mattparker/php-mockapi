@@ -39,7 +39,7 @@ class SilexApplicationHandler {
         $definitions = $this->definitions;
         $handler = function (Request $request) use ($definitions) {
 
-            return new Response('hi there', 200);
+            return new Response('', 200);
         };
 
         return $handler;

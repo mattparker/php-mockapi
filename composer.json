@@ -1,6 +1,7 @@
 {
 
-    'require': {
-        'silex/silex': "*"
+    "require": {
+        "silex/silex": "*",
+        "phpunit/phpunit": "4.*"
     }
 }
