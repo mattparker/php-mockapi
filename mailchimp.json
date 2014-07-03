@@ -1,0 +1,19 @@
+{
+
+    "routes": {
+
+        "lists/subscribe": {
+
+            "get": [
+                {
+                    "params": {},
+                    "return": {
+                        "httpcode": 200,
+                        "body": {}
+                    }
+                }
+            ]
+        }
+
+    }
+}
