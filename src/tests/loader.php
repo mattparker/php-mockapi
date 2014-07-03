@@ -10,6 +10,9 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
+require_once __DIR__ . '/../MockServer/SilexApplicationHandler.php';
+require_once __DIR__ . '/../MockServer/SilexApplicationHandlerSet.php';
+
 /*set_include_path(__DIR__ . '/../' . PATH_SEPARATOR . get_include_path());
 
 spl_autoload_register(function ($classname) {

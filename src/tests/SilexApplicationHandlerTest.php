@@ -7,7 +7,6 @@
  */
 
 require_once __DIR__ . '/loader.php';
-require_once __DIR__ . '/../MockServer/SilexApplicationHandler.php';
 
 
 use MockServer\SilexApplicationHandler;
@@ -103,7 +102,8 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $defn = [
             [
                 'params' => ['a' => 1],
-                'response' => ['body' => 'hello']]
+                'response' => ['body' => 'hello']
+            ]
         ];
         $handler = new SilexApplicationHandler('get', $defn);
         $cb = $handler->getHandler();
@@ -120,7 +120,8 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $defn = [
             [
                 'params' => ['a' => 1, 'b' => 2],
-                'response' => ['body' => 'hello']]
+                'response' => ['body' => 'hello']
+            ]
         ];
         $handler = new SilexApplicationHandler('get', $defn);
         $cb = $handler->getHandler();
@@ -136,7 +137,8 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $defn = [
             [
                 'params' => ['a' => 1, 'b' => 2],
-                'response' => ['body' => 'hello']]
+                'response' => ['body' => 'hello']
+            ]
         ];
         $handler = new SilexApplicationHandler('get', $defn);
         $cb = $handler->getHandler();
@@ -153,7 +155,8 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $defn = [
             [
                 'params' => ['a' => 1],
-                'response' => ['body' => 'hello']]
+                'response' => ['body' => 'hello']
+            ]
         ];
         $handler = new SilexApplicationHandler('post', $defn);
         $cb = $handler->getHandler();
@@ -171,7 +174,8 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $defn = [
             [
                 'params' => ['a' => 1],
-                'response' => ['body' => 'hello']]
+                'response' => ['body' => 'hello']
+            ]
         ];
         $handler = new SilexApplicationHandler('post', $defn);
         $cb = $handler->getHandler();
@@ -181,6 +185,33 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $response = $cb($request);
         /** @var $response Response */
         $this->assertEquals('', $response->getContent());
+    }
+
+
+    public function test_that_two_sets_of_params_match_correctly () {
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => ['body' => 'hello']
+            ],
+            [
+                'params' => ['a' => 2],
+                'response' => ['body' => 'goodbye']
+            ]
+        ];
+        $handler = new SilexApplicationHandler('post', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request([], ['a' => 2]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('goodbye', $response->getContent());
+
+        $request2 = new Request([], ['a' => 1]);
+        $response2 = $cb($request2);
+        /** @var $response2 Response */
+        $this->assertEquals('hello', $response2->getContent());
     }
 
 

@@ -9,8 +9,6 @@
 namespace MockServer;
 
 
-use stdClass;
-
 class SilexApplicationHandlerSet implements \Iterator {
 
 
@@ -53,9 +51,9 @@ class SilexApplicationHandlerSet implements \Iterator {
 
 
     /**
-     * @param stdClass $definitions
+     * @param array $definitions
      */
-    protected function createHandlers (stdClass $definitions) {
+    protected function createHandlers (array $definitions) {
         foreach ($definitions as $method => $definition) {
 
             $route = new SilexApplicationHandler($method, $definition);
@@ -68,7 +66,7 @@ class SilexApplicationHandlerSet implements \Iterator {
     /**
      * Return the current element
      * @link http://php.net/manual/en/iterator.current.php
-     * @return mixed Can return any type.
+     * @return SilexApplicationHandler
      */
     public function current()
     {
@@ -88,7 +86,7 @@ class SilexApplicationHandlerSet implements \Iterator {
     /**
      * Return the key of the current element
      * @link http://php.net/manual/en/iterator.key.php
-     * @return mixed scalar on success, or null on failure.
+     * @return int
      */
     public function key()
     {
