@@ -8,15 +8,38 @@
 
 namespace MockServer;
 
-
+/**
+ * Class Parser
+ *
+ * Main API: takes an array of route/response definitions and
+ * creates an application generator that will add the routes
+ * and callbacks to the Silex Application.
+ *
+ * @package MockServer
+ */
 class Parser {
 
 
+    /**
+     * @var array
+     */
     protected $defn;
 
 
-    public function __construct (\stdClass $server_definition) {
+    /**
+     * @param array $server_definition Must contain a key 'routes' with the routing/response
+     * data in it
+     * @throws \RuntimeException
+     */
+    public function __construct (array $server_definition) {
+
+        if (!array_key_exists('routes', $server_definition)) {
+            throw new \RuntimeException("You need an array with key 'routes' that "
+                . "defines routes and responses");
+        }
+
         $this->defn = $server_definition;
+
     }
 
 
@@ -27,7 +50,7 @@ class Parser {
 
         $routers = [];
 
-        foreach ($this->defn->routes as $route => $definitions) {
+        foreach ($this->defn['routes'] as $route => $definitions) {
 
             $routers[] = new SilexApplicationHandlerSet($route, $definitions);
 

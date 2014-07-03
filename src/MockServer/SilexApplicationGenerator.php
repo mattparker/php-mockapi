@@ -8,6 +8,8 @@
 
 namespace MockServer;
 
+use Silex\Application;
+
 
 class SilexApplicationGenerator {
 
@@ -31,9 +33,9 @@ class SilexApplicationGenerator {
 
     /**
      * This is where we add our routes and handler functions
-     * @param \Silex\Application $app
+     * @param Application $app
      */
-    public function create (\Silex\Application $app) {
+    public function create (Application $app) {
 
         foreach ($this->handlers as $handlerset) {
 
