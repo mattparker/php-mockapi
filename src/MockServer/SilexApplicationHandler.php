@@ -54,6 +54,11 @@ class SilexApplicationHandler {
         $definitions = $this->definitions;
         $parent = $this;
 
+
+        /**
+         * @param Request $request
+         * @return Response
+         */
         $handler = function (Request $request) use ($definitions, $parent) {
 
             $http_response_code = 200;
@@ -62,19 +67,63 @@ class SilexApplicationHandler {
 
             foreach ($definitions as $defn) {
 
-                $http_response_body = $parent->extractFromArray($defn, 'response', 'body', '');
-                $http_response_code = $parent->extractFromArray($defn, 'response', 'httpcode', 200);
+                $paramsMatched = $parent->doParamsMatch($request, $parent->extractFromArray($defn, 'params', []));
 
+                if ($paramsMatched) {
+                    $http_response_body = $parent->extractFromArray($defn, 'response', 'body', '');
+                    $http_response_code = $parent->extractFromArray($defn, 'response', 'httpcode', 200);
+                    return new Response($http_response_body, $http_response_code);
+                }
 
             }
+
             return new Response($http_response_body, $http_response_code);
+
         };
 
         return $handler;
     }
 
 
+    /**
+     * Checks if the GET or POST params in the request match (exactly) those in
+     * $params
+     *
+     * @param Request $request
+     * @param array $params
+     * @return bool
+     */
+    protected function doParamsMatch (Request $request, array $params) {
 
+        switch ($this->getMethod()) {
+
+            case 'post':
+                $request_param_bag = $request->request;
+                break;
+
+            case 'get':
+            default:
+                $request_param_bag = $request->query;
+                break;
+        }
+
+        if (!$request_param_bag) {
+            return false;
+        }
+
+        $request_params = $request_param_bag->all();
+
+        if (count($params) !== count($request_params)) {
+            return false;
+        }
+
+        if (count(array_diff_assoc($params, $request_params)) === 0 &&
+            count(array_diff_assoc($request_params, $params)) === 0) {
+            return true;
+        }
+        return false;
+
+    }
 
 
     /**

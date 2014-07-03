@@ -16,12 +16,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
 
-    private function getMockRequest () {
-        $request = $this->getMockBuilder('Symfony\Component\HttpFoundation\Request')
-            ->disableOriginalConstructor()
-            ->getMock();
-        return $request;
-    }
 
 
 
@@ -40,9 +34,10 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $handler = new SilexApplicationHandler('get', []);
         $cb = $handler->getHandler();
 
-        $request = $this->getMockRequest();
+        $request = new Request();
 
         $response = $cb($request);
+        /** @var $response Response */
         $this->assertEquals('', $response->getContent());
         $this->assertEquals(200, $response->getStatusCode());
 
@@ -57,9 +52,10 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $handler = new SilexApplicationHandler('get', $defn);
         $cb = $handler->getHandler();
 
-        $request = $this->getMockRequest();
+        $request = new Request();
 
         $response = $cb($request);
+        /** @var $response Response */
         $this->assertEquals('', $response->getContent());
         $this->assertEquals(404, $response->getStatusCode());
 
@@ -75,12 +71,118 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
         $handler = new SilexApplicationHandler('get', $defn);
         $cb = $handler->getHandler();
 
-        $request = $this->getMockRequest();
+        $request = new Request();
 
         $response = $cb($request);
+        /** @var $response Response */
         $this->assertEquals('hello', $response->getContent());
 
     }
+
+
+
+    public function test_we_can_test_for_request_params_on_get_request () {
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('get', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request(['a' => 1]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('hello', $response->getContent());
+    }
+
+
+
+    public function test_that_params_that_dont_match_return_defaults () {
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('get', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request(['a' => 2]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('', $response->getContent());
+    }
+
+
+    public function test_that_params_that_partially_match_return_defaults () {
+        $defn = [
+            [
+                'params' => ['a' => 1, 'b' => 2],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('get', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request(['a' => 1, 'b' => 10]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('', $response->getContent());
+    }
+
+    public function test_that_params_that_multiple_params_match_return_body () {
+        $defn = [
+            [
+                'params' => ['a' => 1, 'b' => 2],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('get', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request(['a' => 1, 'b' => 2]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('hello', $response->getContent());
+    }
+
+
+    public function test_that_post_params_that_match_return_body () {
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('post', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request([], ['a' => 1]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('hello', $response->getContent());
+    }
+
+
+
+    public function test_that_post_params_that_match_return_default () {
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => ['body' => 'hello']]
+        ];
+        $handler = new SilexApplicationHandler('post', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request([], ['a' => 2]);
+
+        $response = $cb($request);
+        /** @var $response Response */
+        $this->assertEquals('', $response->getContent());
+    }
+
 
 }
  
