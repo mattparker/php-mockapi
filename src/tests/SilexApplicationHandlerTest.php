@@ -215,5 +215,30 @@ class SilexApplicationHandlerTest extends \PHPUnit_Framework_TestCase {
     }
 
 
+    public function test_we_can_return_json_if_an_array_is_the_response_body () {
+
+        $defn = [
+            [
+                'params' => ['a' => 1],
+                'response' => [
+                    'body' => [
+                        'this' => 'is a json response',
+                        'i' => 'hope'
+                    ]
+                ]
+            ]
+        ];
+        $handler = new SilexApplicationHandler('get', $defn);
+        $cb = $handler->getHandler();
+
+        $request = new Request(['a' => 1]);
+
+        $response = $cb($request);
+        /** @var $response Symfony\Component\HttpFoundation\JsonResponse */
+        $this->assertInstanceOf('Symfony\Component\HttpFoundation\JsonResponse', $response);
+        $this->assertEquals(json_encode($defn[0]['response']['body']), $response->getContent());
+    }
+
+
 }
  

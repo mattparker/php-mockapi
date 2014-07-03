@@ -9,6 +9,7 @@
 namespace MockServer;
 
 
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -72,6 +73,10 @@ class SilexApplicationHandler {
                 if ($paramsMatched) {
                     $http_response_body = $parent->extractFromArray($defn, 'response', 'body', '');
                     $http_response_code = $parent->extractFromArray($defn, 'response', 'httpcode', 200);
+
+                    if (is_array($http_response_body)) {
+                        return new JsonResponse($http_response_body, $http_response_code);
+                    }
                     return new Response($http_response_body, $http_response_code);
                 }
 
@@ -174,27 +179,5 @@ class SilexApplicationHandler {
         return call_user_func_array(array($this, 'extractFromArray'), $args);
 
     }
-/*
- *
- *
-            foreach ($definitions as $method => $definition) {
 
-                $handler = function (Request $request) use ($definition) {
-
-                    foreach ($definition as $request_response_defn) {
-
-
-                        $return_code = $request_response_defn->return->httpcode;// property_exists($request_response_defn, 'httpcode') ? $request_response_defn->httpcode : 200;
-                        $return_body = $request_response_defn->return->body;// property_exists($request_response_defn, 'body') ? $request_response_defn->body : "";
-
-                    }
-
-                    return new Response($return_body, $return_code);
-                };
-
-                call_user_func_array([$app, $method], [$route, $handler]);
-
-            }
-        }
- */
 }

@@ -10,7 +10,14 @@ namespace MockServer;
 
 use Silex\Application;
 
-
+/**
+ * Class SilexApplicationGenerator
+ *
+ * Responsible for adding handlers to the Silex Application.
+ * This is created by the \MockServer\Parser.
+ *
+ * @package MockServer
+ */
 class SilexApplicationGenerator {
 
 
@@ -33,6 +40,8 @@ class SilexApplicationGenerator {
 
     /**
      * This is where we add our routes and handler functions
+     * to the application
+     *
      * @param Application $app
      */
     public function create (Application $app) {
