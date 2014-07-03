@@ -6,7 +6,9 @@
 
             "get": [
                 {
-                    "params": {},
+                    "params": {
+                        "a": 2
+                    },
                     "response": {
                         "httpcode": 200,
                         "body": "hello"
