@@ -115,7 +115,10 @@ hack this a bit to remove the conflict.
 
 #### http://localhost:8000/__mockserver/clear
 
-Clears out any data (which is stored in ./data/requests.txt as a serialized array).
+Clears out any data (which is stored in ./data/requests.txt as a serialized array).  Because of this,
+you'll want to clear it out at the beginning of any tests, and probably at the end too.  And
+if you really want to hammer it (I can't see why, but anyway) then you might want to implement
+a more efficient storage solution.
 
 #### http://localhost:8000/__mockserver/show/{id}
 
