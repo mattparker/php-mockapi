@@ -108,6 +108,7 @@ class MockServerTest extends WebTestCase {
 
         $this->assertEquals("/index", $all_arr[0]->request->path);
         $this->assertEquals([], $all_arr[0]->request->params);
+        $this->assertEquals('GET', $all_arr[0]->request->method);
         $this->assertEquals("", $all_arr[0]->response->content);
         $this->assertEquals(200, $all_arr[0]->response->httpcode);
 

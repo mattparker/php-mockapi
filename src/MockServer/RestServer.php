@@ -72,7 +72,8 @@ class RestServer {
             $ret = [
                 'request' => [
                     'path' => $path,
-                    'params' => $params->all()
+                    'params' => $params->all(),
+                    'method' => $request->getMethod()
                 ],
                 'response' => [
                     'httpcode' => $response->getStatusCode(),
