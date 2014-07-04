@@ -138,6 +138,7 @@ class MockServerTest extends WebTestCase {
         $client->request('GET', '/__mockserver/clear');
         $this->assertTrue($client->getResponse()->isOk());
 
+        // and check there's none left
         $client->request('GET', '/__mockserver/show/all');
         $all_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals(0, count($all_arr));
