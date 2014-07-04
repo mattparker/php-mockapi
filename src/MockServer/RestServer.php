@@ -132,7 +132,7 @@ class RestServer {
 
             $resp = $data_store->fetch($id);
 
-            if (count($resp) === 0) {
+            if (!in_array($id, ['all', 'last']) && count($resp) === 0) {
                 return new JsonResponse(["error" => true, "msg" => "Item {$id} not found"], 404);
             }
             return new JsonResponse($resp);
