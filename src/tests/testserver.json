@@ -1,0 +1,67 @@
+{
+
+    "meta": {
+        "name": "Routes for running Silex WebTestCase tests against",
+        "date": "4/7/2014",
+        "author": "Matt Parker, Lamplight Database Systems Ltd"
+    },
+
+    "routes": {
+
+        "index": {
+            "get": [{
+            }],
+            "post": [{
+                "response": {
+                    "httpcode": 400,
+                    "body": "POSTing to the index page is just not on"
+                }
+            }]
+        },
+
+        "testing/params": {
+            "get": [
+                {
+                    "params": {
+                        "a": 2
+                    },
+                    "response": {
+                        "body": "a was two"
+                    }
+                },
+
+                {
+                    "params": {
+                        "a": 2,
+                        "b": 3
+                    },
+                    "response": {
+                        "body": "a was two and b was three"
+                    }
+                },
+
+                {
+                    "params": {
+                        "b": 3
+                    },
+                    "response": {
+                        "body": "b was three"
+                    }
+                }
+            ]
+        },
+
+        "json/response": {
+            "get": [
+                {
+                    "response": {
+                        "body": {
+                            "d": 12345,
+                            "e": "hello there"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
