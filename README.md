@@ -88,6 +88,17 @@ The json file should look something like this:
 
 ```
 
+So the structure is something like this: `routes["particular/route"].get = []`.  The array is an array of objects,
+each one specifying the parameters to match, and the response to return.  That is, for a particular route and method,
+you can return different things depending on the parameters passed.  In a GET query, these are the query parameters,
+in a POST they are the POSTed data.
+
+If you specify `params`, they will have to match the request precisely.  If you do not specify any `params` then
+anything will match.  So a request with parameters that do not match exactly any of the specified param sets will
+return the same as an empty request.
+
+The default value for `httpcode` is 200, and for `body` is '', the empty string.
+
 
 ### Start the php server
 
@@ -143,7 +154,8 @@ Something like this (for one).  They're always in an array.
             "params": {
                 "a": 4,
                 "b": 50
-            }
+            },
+            "method": "GET"
         },
         "response": {
             "httpcode": 200,
@@ -167,7 +179,8 @@ appropriately.
 
 ## Tests
 
-There's some unit tests in `mockserver/src/tests` you can run with phpunit, if you like.
+There's some unit tests in `mockserver/src/tests` you can run with phpunit, if you like.  There's some unit
+tests for the various components, and a Silex integration test which uses the server specified in `src/tests/testserver.json`
 
 
 ## License
