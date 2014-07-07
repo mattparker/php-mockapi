@@ -1,21 +1,5770 @@
-{
-
-    "routes": {
-
-        "lists/subscribe": {
-
-            "get": [
-                {
-                    "params": {
-                        "a": 2
-                    },
-                    "response": {
-                        "httpcode": 200,
-                        "body": "hello"
+{"meta": {
+    "name": "Mailchimp Mock server API",
+    "description": "Auto-generated documents for the MockServer Mailchimp server definition file.  Generated automatically from API docs http:\/\/apidocs.mailchimp.com\/api\/2.0\/",
+    "version": "2.0"
+}, "routes": {
+    "campaigns\/content": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only use POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "options": {
+                        "view": "example view",
+                        "email": {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "html": "example html",
+                        "text": "example text"
                     }
                 }
-            ]
-        }
-
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/create": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "type": "example type",
+                    "options": {
+                        "list_id": "example list_id",
+                        "subject": "example subject",
+                        "from_email": "example from_email",
+                        "from_name": "example from_name",
+                        "to_name": "example to_name",
+                        "template_id": 42,
+                        "gallery_template_id": 42,
+                        "base_template_id": 42,
+                        "folder_id": 42,
+                        "tracking": {
+                            "opens": true,
+                            "html_clicks": true,
+                            "text_clicks": true
+                        },
+                        "title": "example title",
+                        "authenticate": true,
+                        "analytics": {
+                            "google": "example google",
+                            "clicktale": "example clicktale",
+                            "gooal": "example gooal"
+                        },
+                        "auto_footer": true,
+                        "inline_css": true,
+                        "generate_text": true,
+                        "auto_tweet": true,
+                        "auto_fb_post": ["..."],
+                        "fb_comments": true,
+                        "timewarp": true,
+                        "ecomm360": true,
+                        "crm_tracking": [
+                            {
+                                "salesforce": {
+                                    "campaign": true,
+                                    "notes": true
+                                },
+                                "highrise": {
+                                    "campaign": true,
+                                    "notes": true
+                                },
+                                "capsule": {
+                                    "notes": true
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "html": "example html",
+                        "sections": {
+                            "...": "..."
+                        },
+                        "text": "example text",
+                        "url": "example url",
+                        "archive": "example archive",
+                        "archive_type": "example archive_type"
+                    },
+                    "segment_opts": {
+                        "...": "..."
+                    },
+                    "type_opts": {
+                        "rss": {
+                            "url": "example url",
+                            "schedule": "example schedule",
+                            "schedule_hour": "example schedule_hour",
+                            "schedule_weekday": "example schedule_weekday",
+                            "schedule_monthday": "example schedule_monthday",
+                            "days": {
+                                "1": true,
+                                "2": true,
+                                "3": true,
+                                "4": true,
+                                "5": true,
+                                "6": true,
+                                "7": true
+                            }
+                        },
+                        "absplit": {
+                            "split_test": "example split_test",
+                            "pick_winner": "example pick_winner",
+                            "wait_units": 42,
+                            "wait_time": 42,
+                            "split_size": 42,
+                            "from_name_a": "example from_name_a",
+                            "from_name_b": "example from_name_b",
+                            "from_email_a": "example from_email_a",
+                            "from_email_b": "example from_email_b",
+                            "subject_a": "example subject_a",
+                            "subject_b": "example subject_b"
+                        },
+                        "auto": {
+                            "offset-units": "example offset-units",
+                            "offset-time": "example offset-time",
+                            "offset-dir": "example offset-dir",
+                            "event": "example event",
+                            "event-datemerge": "example event-datemerge",
+                            "campaign_id": "example campaign_id",
+                            "campaign_url": "example campaign_url",
+                            "schedule_hour": 42,
+                            "use_import_time": true,
+                            "days": {
+                                "1": true,
+                                "2": true,
+                                "3": true,
+                                "4": true,
+                                "5": true,
+                                "6": true,
+                                "7": true
+                            }
+                        }
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "...": "..."
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/delete": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "filters": {
+                        "campaign_id": "example campaign_id",
+                        "parent_id": "example parent_id",
+                        "list_id": "example list_id",
+                        "folder_id": 42,
+                        "template_id": 42,
+                        "status": "example status",
+                        "type": "example type",
+                        "from_name": "example from_name",
+                        "from_email": "example from_email",
+                        "title": "example title",
+                        "subject": "example subject",
+                        "sendtime_start": "example sendtime_start",
+                        "sendtime_end": "example sendtime_end",
+                        "uses_segment": true,
+                        "exact": true
+                    },
+                    "start": 42,
+                    "limit": 42,
+                    "sort_field": "example sort_field",
+                    "sort_dir": "example sort_dir"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "id": "example id",
+                                "web_id": 42,
+                                "list_id": "example list_id",
+                                "folder_id": 42,
+                                "template_id": 42,
+                                "content_type": "example content_type",
+                                "title": "example title",
+                                "type": "example type",
+                                "create_time": "example create_time",
+                                "send_time": "example send_time",
+                                "emails_sent": 42,
+                                "status": "example status",
+                                "from_name": "example from_name",
+                                "from_email": "example from_email",
+                                "subject": "example subject",
+                                "to_name": "example to_name",
+                                "archive_url": "example archive_url",
+                                "inline_css": true,
+                                "analytics": "example analytics",
+                                "analytics_tag": "example analytics_tag",
+                                "authenticate": true,
+                                "ecomm360": true,
+                                "auto_tweet": true,
+                                "auto_fb_post": "example auto_fb_post",
+                                "auto_footer": true,
+                                "timewarp": true,
+                                "timewarp_schedule": "example timewarp_schedule",
+                                "parent_id": "example parent_id",
+                                "is_child": true,
+                                "tests_sent": "example tests_sent",
+                                "tests_remain": 42,
+                                "tracking": {
+                                    "html_clicks": true,
+                                    "text_clicks": true,
+                                    "opens": true
+                                },
+                                "segment_text": "example segment_text",
+                                "segment_opts": ["..."],
+                                "saved_segment": {
+                                    "id": 42,
+                                    "type": "example type",
+                                    "name": "example name"
+                                },
+                                "type_opts": {
+                                    "...": "..."
+                                },
+                                "comments_total": 42,
+                                "comments_unread": 42,
+                                "summary": {
+                                    "...": "..."
+                                }
+                            }
+                        ],
+                        "errors": [
+                            {
+                                "filter": "example filter",
+                                "value": "example value",
+                                "code": 42,
+                                "error": "example error"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/pause": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/ready": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "is_ready": true,
+                        "items": [
+                            {
+                                "type": "example type",
+                                "heading": "example heading",
+                                "details": "example details"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/replicate": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "...": "..."
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/resume": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/schedule-batch": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "schedule_time": "example schedule_time",
+                    "num_batches": 42,
+                    "stagger_mins": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/schedule": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "schedule_time": "example schedule_time",
+                    "schedule_time_b": "example schedule_time_b"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/segment-test": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "list_id": "example list_id",
+                    "options": {
+                        "saved_segment_id": "example saved_segment_id",
+                        "match": "example match",
+                        "conditions": ["..."]
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/send": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/send-test": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "test_emails": ["..."],
+                    "send_type": "example send_type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/template-content": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "...": "..."
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/unschedule": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "campaigns\/update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "name": "example name",
+                    "value": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "data": {
+                            "...": "..."
+                        },
+                        "errors": [
+                            {
+                                "code": 42,
+                                "message": "example message",
+                                "name": "example name"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "ecomm\/order-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "order": {
+                        "id": "example id",
+                        "campaign_id": "example campaign_id",
+                        "email_id": "example email_id",
+                        "email": "example email",
+                        "total": 3.14159,
+                        "order_date": "example order_date",
+                        "shipping": 3.14159,
+                        "tax": 3.14159,
+                        "store_id": "example store_id",
+                        "store_name": "example store_name",
+                        "items": [
+                            {
+                                "line_num": 42,
+                                "product_id": 42,
+                                "sku": "example sku",
+                                "product_name": "example product_name",
+                                "category_id": 42,
+                                "category_name": "example category_name",
+                                "qty": 3.14159,
+                                "cost": 3.14159
+                            }
+                        ]
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "ecomm\/order-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "store_id": "example store_id",
+                    "order_id": "example order_id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "ecomm\/orders": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "start": 42,
+                    "limit": 42,
+                    "since": "example since"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "store_id": "example store_id",
+                                "store_name": "example store_name",
+                                "order_id": "example order_id",
+                                "email": "example email",
+                                "order_total": 3.14159,
+                                "tax_total": 3.14159,
+                                "ship_total": 3.14159,
+                                "order_date": "example order_date",
+                                "items": [
+                                    {
+                                        "line_num": 42,
+                                        "product_id": 42,
+                                        "product_name": "example product_name",
+                                        "product_sku": "example product_sku",
+                                        "product_category_id": 42,
+                                        "product_category_name": "example product_category_name",
+                                        "qty": 42,
+                                        "cost": 3.14159
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "folders\/add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "name": "example name",
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "folder_id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "folders\/del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "fid": 42,
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "folders\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "folder_id": 42,
+                            "name": "example name",
+                            "date_created": "example date_created",
+                            "type": "example type",
+                            "cnt": 42
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "folders\/update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "fid": 42,
+                    "name": "example name",
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/add-file-to-folder": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "file_id": 42,
+                    "folder_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": true
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/add-folder": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "name": "example name"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "data.id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "opts": {
+                        "type": "example type",
+                        "start": 42,
+                        "limit": 42,
+                        "sort_by": "example sort_by",
+                        "sort_dir": "example sort_dir",
+                        "search_term": "example search_term",
+                        "folder_id": 42
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "id": 42,
+                                "name": "example name",
+                                "time": "example time",
+                                "size": 42,
+                                "full": "example full",
+                                "thumb": "example thumb"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/list-folders": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "search_term": "example search_term"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "id": 42,
+                                "name": "example name",
+                                "file_count": 42
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/remove-all-files-from-folder": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "folder_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": true
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/remove-file-from-folder": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "file_id": 42,
+                    "folder_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": true
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "gallery\/remove-folder": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "folder_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": true
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/abuse-reports": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "start": 42,
+                    "limit": 42,
+                    "since": "example since"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "date": "example date",
+                                "email": "example email",
+                                "campaign_id": "example campaign_id",
+                                "type": "example type"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/activity": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": ["..."]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/batch-subscribe": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "batch": [
+                        {
+                            "email": {
+                                "email": "example email",
+                                "euid": "example euid",
+                                "leid": "example leid"
+                            },
+                            "email_type": "example email_type",
+                            "merge_vars": {
+                                "...": "..."
+                            }
+                        }
+                    ],
+                    "double_optin": true,
+                    "update_existing": true,
+                    "replace_interests": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "add_count": 42,
+                        "adds": [
+                            {
+                                "email": "example email",
+                                "euid": "example euid",
+                                "leid": "example leid"
+                            }
+                        ],
+                        "update_count": 42,
+                        "updates": [
+                            {
+                                "email": "example email",
+                                "euid": "example euid",
+                                "leid": "example leid"
+                            }
+                        ],
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "code": 42,
+                                "error": "example error",
+                                "row": {
+                                    "...": "..."
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/batch-unsubscribe": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "batch": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ],
+                    "delete_member": true,
+                    "send_goodbye": true,
+                    "send_notify": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "success_count": 42,
+                            "error_count": 42,
+                            "errors": [
+                                {
+                                    "email": {
+                                        "email": "example email",
+                                        "euid": "example euid",
+                                        "leid": "example leid"
+                                    },
+                                    "code": 42,
+                                    "error": "example error"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/clients": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "desktop": {
+                            "penetration": 3.14159,
+                            "clients": [
+                                {
+                                    "client": "example client",
+                                    "icon": "example icon",
+                                    "percent": "example percent",
+                                    "members": "example members"
+                                }
+                            ]
+                        },
+                        "mobile": {
+                            "penetration": 3.14159,
+                            "clients": [
+                                {
+                                    "client": "example client",
+                                    "icon": "example icon",
+                                    "percent": "example percent",
+                                    "members": "example members"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/growth-history": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "month": "example month",
+                            "existing": 42,
+                            "imports": 42,
+                            "optins": 42
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-group-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "group_name": "example group_name",
+                    "grouping_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-group-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "group_name": "example group_name",
+                    "grouping_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-group-update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "old_name": "example old_name",
+                    "new_name": "example new_name",
+                    "grouping_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-grouping-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "name": "example name",
+                    "type": "example type",
+                    "groups": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-grouping-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "grouping_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-grouping-update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "grouping_id": 42,
+                    "name": "example name",
+                    "value": "example value"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/interest-groupings": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "counts": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "id": 42,
+                            "name": "example name",
+                            "form_field": "example form_field",
+                            "groups": [
+                                {
+                                    "bit": "example bit",
+                                    "name": "example name",
+                                    "display_order": "example display_order",
+                                    "subscribers": 42
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "filters": {
+                        "list_id": "example list_id",
+                        "list_name": "example list_name",
+                        "from_name": "example from_name",
+                        "from_email": "example from_email",
+                        "from_subject": "example from_subject",
+                        "created_before": "example created_before",
+                        "created_after": "example created_after",
+                        "exact": true
+                    },
+                    "start": 42,
+                    "limit": 42,
+                    "sort_field": "example sort_field",
+                    "sort_dir": "example sort_dir"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "id": "example id",
+                                "web_id": 42,
+                                "name": "example name",
+                                "date_created": "example date_created",
+                                "email_type_option": true,
+                                "use_awesomebar": true,
+                                "default_from_name": "example default_from_name",
+                                "default_from_email": "example default_from_email",
+                                "default_subject": "example default_subject",
+                                "default_language": "example default_language",
+                                "list_rating": 3.14159,
+                                "subscribe_url_short": "example subscribe_url_short",
+                                "subscribe_url_long": "example subscribe_url_long",
+                                "beamer_address": "example beamer_address",
+                                "visibility": "example visibility",
+                                "stats": {
+                                    "member_count": 3.14159,
+                                    "unsubscribe_count": 3.14159,
+                                    "cleaned_count": 3.14159,
+                                    "member_count_since_send": 3.14159,
+                                    "unsubscribe_count_since_send": 3.14159,
+                                    "cleaned_count_since_send": 3.14159,
+                                    "campaign_count": 3.14159,
+                                    "grouping_count": 3.14159,
+                                    "group_count": 3.14159,
+                                    "merge_var_count": 3.14159,
+                                    "avg_sub_rate": 3.14159,
+                                    "avg_unsub_rate": 3.14159,
+                                    "target_sub_rate": 3.14159,
+                                    "open_rate": 3.14159,
+                                    "click_rate": 3.14159
+                                },
+                                "modules": ["..."]
+                            }
+                        ],
+                        "errors": [
+                            {
+                                "param": "example param",
+                                "code": 42,
+                                "error": "example error"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/locations": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": ["..."]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/member-activity": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "emails": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "error": "example error",
+                                "code": "example code"
+                            }
+                        ],
+                        "data": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "activity": [
+                                    {
+                                        "action": "example action",
+                                        "timestamp": "example timestamp",
+                                        "url": "example url",
+                                        "type": "example type",
+                                        "campaign_id": "example campaign_id",
+                                        "campaign_data": {
+                                            "...": "..."
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/member-info": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "emails": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "error": "example error"
+                            }
+                        ],
+                        "data": [
+                            {
+                                "id": "example id",
+                                "email": "example email",
+                                "email_type": "example email_type",
+                                "merges": {
+                                    "GROUPINGS": [
+                                        {
+                                            "id": 42,
+                                            "name": "example name",
+                                            "groups": [
+                                                {
+                                                    "name": "example name",
+                                                    "interested": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "status": "example status",
+                                "ip_signup": "example ip_signup",
+                                "timestamp_signup": "example timestamp_signup",
+                                "ip_opt": "example ip_opt",
+                                "timestamp_opt": "example timestamp_opt",
+                                "member_rating": 42,
+                                "campaign_id": "example campaign_id",
+                                "lists": [
+                                    {
+                                        "id": "example id",
+                                        "status": "example status"
+                                    }
+                                ],
+                                "timestamp": "example timestamp",
+                                "info_changed": "example info_changed",
+                                "web_id": 42,
+                                "leid": 42,
+                                "list_id": "example list_id",
+                                "list_name": "example list_name",
+                                "language": "example language",
+                                "is_gmonkey": true,
+                                "geo": {
+                                    "latitude": "example latitude",
+                                    "longitude": "example longitude",
+                                    "gmtoff": "example gmtoff",
+                                    "dstoff": "example dstoff",
+                                    "timezone": "example timezone",
+                                    "cc": "example cc",
+                                    "region": "example region"
+                                },
+                                "clients": {
+                                    "name": "example name",
+                                    "icon_url": "example icon_url"
+                                },
+                                "static_segments": [
+                                    {
+                                        "id": 42,
+                                        "name": "example name",
+                                        "added": "example added"
+                                    }
+                                ],
+                                "notes": [
+                                    {
+                                        "id": 42,
+                                        "note": "example note",
+                                        "created": "example created",
+                                        "updated": "example updated",
+                                        "created_by_name": "example created_by_name"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/members": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "status": "example status",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "sort_field": "example sort_field",
+                        "sort_dir": "example sort_dir",
+                        "segment": {
+                            "...": "..."
+                        }
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": ["..."]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-var-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "tag": "example tag",
+                    "name": "example name",
+                    "options": {
+                        "field_type": "example field_type",
+                        "req": true,
+                        "public": true,
+                        "show": true,
+                        "order": 42,
+                        "default_value": "example default_value",
+                        "helptext": "example helptext",
+                        "choices": ["..."],
+                        "dateformat": "example dateformat",
+                        "phoneformat": "example phoneformat",
+                        "defaultcountry": "example defaultcountry"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "name": "example name",
+                        "req": true,
+                        "field_type": "example field_type",
+                        "public": true,
+                        "show": true,
+                        "order": "example order",
+                        "default": "example default",
+                        "helptext": "example helptext",
+                        "size": "example size",
+                        "tag": "example tag",
+                        "choices": ["..."],
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-var-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "tag": "example tag"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-var-reset": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "tag": "example tag"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-var-set": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "tag": "example tag",
+                    "value": "example value"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-var-update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "tag": "example tag",
+                    "options": {
+                        "...": "..."
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "name": "example name",
+                        "req": true,
+                        "field_type": "example field_type",
+                        "public": true,
+                        "show": true,
+                        "order": "example order",
+                        "default": "example default",
+                        "helptext": "example helptext",
+                        "size": "example size",
+                        "tag": "example tag",
+                        "choices": ["..."],
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/merge-vars": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "data": [
+                            {
+                                "id": "example id",
+                                "name": "example name",
+                                "merge_vars": [
+                                    {
+                                        "name": "example name",
+                                        "req": true,
+                                        "field_type": "example field_type",
+                                        "public": true,
+                                        "show": true,
+                                        "order": "example order",
+                                        "default": "example default",
+                                        "helptext": "example helptext",
+                                        "size": "example size",
+                                        "tag": "example tag",
+                                        "choices": ["..."],
+                                        "id": 42
+                                    }
+                                ]
+                            }
+                        ],
+                        "errors": [
+                            {
+                                "id": "example id",
+                                "code": 42,
+                                "msg": "example msg"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/segment-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "opts": {
+                        "type": "example type",
+                        "name": "example name",
+                        "segment_opts": {
+                            "match": "example match",
+                            "conditions": ["..."]
+                        }
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/segment-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/segment-test": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "list_id": "example list_id",
+                    "options": {
+                        "...": "..."
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/segment-update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42,
+                    "opts": {
+                        "name": "example name",
+                        "segment_opts": {
+                            "match": "example match",
+                            "conditions": ["..."]
+                        }
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/segments": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "static": [
+                            {
+                                "id": 42,
+                                "name": "example name",
+                                "created_date": "example created_date",
+                                "last_update": "example last_update",
+                                "last_reset": "example last_reset"
+                            }
+                        ],
+                        "saved": [
+                            {
+                                "id": 42,
+                                "name": "example name",
+                                "segment_opts": "example segment_opts",
+                                "segment_text": "example segment_text"
+                            }
+                        ],
+                        "created_date": "example created_date",
+                        "last_update": "example last_update"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segment-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "name": "example name"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segment-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segment-members-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42,
+                    "batch": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "code": "example code",
+                                "error": "example error"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segment-members-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42,
+                    "batch": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "code": "example code",
+                                "error": "example error"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segment-reset": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "seg_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/static-segments": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "get_counts": true,
+                    "start": 42,
+                    "limit": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "id": 42,
+                            "name": "example name",
+                            "member_count": 42,
+                            "created_date": "example created_date",
+                            "last_update": "example last_update",
+                            "last_reset": "example last_reset"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/subscribe": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "merge_vars": {
+                        "new-email": "example new-email",
+                        "groupings": [
+                            {
+                                "id": 42,
+                                "name": "example name",
+                                "groups": ["..."]
+                            }
+                        ],
+                        "optin_ip": "example optin_ip",
+                        "optin_time": "example optin_time",
+                        "mc_location": {
+                            "latitude": "example latitude",
+                            "longitude": "example longitude",
+                            "anything": "example anything"
+                        },
+                        "mc_language": "example mc_language",
+                        "mc_notes": [
+                            {
+                                "note": "example note",
+                                "id": 42,
+                                "action": "example action"
+                            }
+                        ]
+                    },
+                    "email_type": "example email_type",
+                    "double_optin": true,
+                    "update_existing": true,
+                    "replace_interests": true,
+                    "send_welcome": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/unsubscribe": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "delete_member": true,
+                    "send_goodbye": true,
+                    "send_notify": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/update-member": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "merge_vars": ["..."],
+                    "email_type": "example email_type",
+                    "replace_interests": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/webhook-add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "url": "example url",
+                    "actions": {
+                        "subscribe": true,
+                        "unsubscribe": true,
+                        "profile": true,
+                        "cleaned": true,
+                        "upemail": true,
+                        "campaign": true
+                    },
+                    "sources": {
+                        "user": true,
+                        "admin": true,
+                        "api": true
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/webhook-del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "url": "example url"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "lists\/webhooks": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "url": "example url",
+                            "actions": {
+                                "subscribe": true,
+                                "unsubscribe": true,
+                                "profile": true,
+                                "cleaned": true,
+                                "upemail": true,
+                                "campaign": true
+                            },
+                            "sources": {
+                                "user": true,
+                                "admin": true,
+                                "api": true
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/account-details": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "exclude": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "username": "example username",
+                        "user_id": "example user_id",
+                        "is_trial": true,
+                        "is_approved": true,
+                        "has_activated": true,
+                        "timezone": "example timezone",
+                        "plan_type": "example plan_type",
+                        "plan_low": 42,
+                        "plan_high": 42,
+                        "plan_start_date": "example plan_start_date",
+                        "emails_left": 42,
+                        "pending_monthly": true,
+                        "first_payment": "example first_payment",
+                        "last_payment": "example last_payment",
+                        "times_logged_in": 42,
+                        "last_login": "example last_login",
+                        "affiliate_link": "example affiliate_link",
+                        "industry": "example industry",
+                        "contact": {
+                            "fname": "example fname",
+                            "lname": "example lname",
+                            "email": "example email",
+                            "company": "example company",
+                            "address1": "example address1",
+                            "address2": "example address2",
+                            "city": "example city",
+                            "state": "example state",
+                            "zip": "example zip",
+                            "country": "example country",
+                            "url": "example url",
+                            "phone": "example phone",
+                            "fax": "example fax"
+                        },
+                        "modules": ["..."],
+                        "orders": ["..."],
+                        "rewards": {
+                            "referrals_this_month": 42,
+                            "notify_on": "example notify_on",
+                            "notify_email": "example notify_email",
+                            "credits": {
+                                "this_month": 42,
+                                "total_earned": 42,
+                                "remaining": 42
+                            },
+                            "inspections": {
+                                "this_month": 42,
+                                "total_earned": 42,
+                                "remaining": 42
+                            },
+                            "referrals": ["..."],
+                            "applied": ["..."]
+                        },
+                        "integrations": ["..."]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/campaigns-for-email": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "options": {
+                        "list_id": "example list_id"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "id": "example id",
+                            "title": "example title",
+                            "subject": "example subject",
+                            "send_time": "example send_time",
+                            "type": "example type"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/chimp-chatter": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "message": "example message",
+                            "type": "example type",
+                            "url": "example url",
+                            "list_id": "example list_id",
+                            "campaign_id": "example campaign_id",
+                            "update_time": "example update_time"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/generate-text": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "type": "example type",
+                    "content": {
+                        "html": "example html",
+                        "cid": "example cid",
+                        "user_template_id": "example user_template_id",
+                        "base_template_id": "example base_template_id",
+                        "gallery_template_id": "example gallery_template_id",
+                        "url": "example url"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "text": "example text"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/inline-css": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "html": "example html",
+                    "strip_css": true
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "html": "example html"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/lists-for-email": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "id": "example id",
+                            "web_id": 42,
+                            "name": "example name"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/ping": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "msg": "example msg"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/search-campaigns": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "query": "example query",
+                    "offset": 42,
+                    "snip_start": "example snip_start",
+                    "snip_end": "example snip_end"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "results": ["..."],
+                        "snippet": "example snippet",
+                        "campaign": {
+                            "...": "..."
+                        }
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/search-members": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "query": "example query",
+                    "id": "example id",
+                    "offset": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "exact_matches": {
+                            "total": 42,
+                            "members": ["..."]
+                        },
+                        "full_search": {
+                            "total": 42,
+                            "members": ["..."]
+                        }
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "helper\/verified-domains": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "domain": "example domain",
+                            "status": "example status",
+                            "email": "example email"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/abuse": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "since": "example since"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": ["..."]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/advice": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "msg": "example msg",
+                            "type": "example type"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/bounce-message": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "date": "example date",
+                        "member": {
+                            "...": "..."
+                        },
+                        "message": "example message"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/bounce-messages": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "since": "example since"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "date": "example date",
+                                "member": {
+                                    "...": "..."
+                                },
+                                "message": "example message"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/click-detail": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "tid": 42,
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "sort_field": "example sort_field",
+                        "sort_dir": "example sort_dir"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "member": {
+                                    "...": "..."
+                                },
+                                "clicks": 42
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/clicks": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": [
+                            {
+                                "url": "example url",
+                                "clicks": 42,
+                                "clicks_percent": 3.14159,
+                                "unique": 42,
+                                "unique_percent": 3.14159,
+                                "tid": 42
+                            }
+                        ],
+                        "a": [
+                            {
+                                "url": "example url",
+                                "clicks": 42,
+                                "clicks_percent": 3.14159,
+                                "unique": 42,
+                                "unique_percent": 3.14159,
+                                "tid": 42
+                            }
+                        ],
+                        "b": [
+                            {
+                                "url": "example url",
+                                "clicks": 42,
+                                "clicks_percent": 3.14159,
+                                "unique": 42,
+                                "unique_percent": 3.14159,
+                                "tid": 42
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/domain-performance": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "domain": "example domain",
+                            "total_sent": 42,
+                            "emails": 42,
+                            "bounces": 42,
+                            "opens": 42,
+                            "clicks": 42,
+                            "unsubs": 42,
+                            "delivered": 42,
+                            "emails_pct": 42,
+                            "bounces_pct": 42,
+                            "opens_pct": 42,
+                            "clicks_pct": 42,
+                            "unsubs_pct": 42
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/ecomm-orders": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "since": "example since"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "store_id": "example store_id",
+                                "store_name": "example store_name",
+                                "order_id": "example order_id",
+                                "member": {
+                                    "...": "..."
+                                },
+                                "order_total": 3.14159,
+                                "tax_total": 3.14159,
+                                "ship_total": 3.14159,
+                                "order_date": "example order_date",
+                                "lines": [
+                                    {
+                                        "line_num": 42,
+                                        "product_id": 42,
+                                        "product_name": "example product_name",
+                                        "product_sku": "example product_sku",
+                                        "product_category_id": 42,
+                                        "product_category_name": "example product_category_name",
+                                        "qty": 3.14159,
+                                        "cost": 3.14159
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/eepurl": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "twitter": {
+                            "tweets": 42,
+                            "first_tweet": "example first_tweet",
+                            "last_tweet": "example last_tweet",
+                            "retweets": 42,
+                            "first_retweet": "example first_retweet",
+                            "last_retweet": "example last_retweet",
+                            "statuses": [
+                                {
+                                    "status": "example status",
+                                    "screen_name": "example screen_name",
+                                    "status_id": "example status_id",
+                                    "datetime": "example datetime",
+                                    "is_retweet": true
+                                }
+                            ]
+                        },
+                        "clicks": {
+                            "clicks": 42,
+                            "first_click": "example first_click",
+                            "last_click": "example last_click",
+                            "locations": [
+                                {
+                                    "country": "example country",
+                                    "region": "example region"
+                                }
+                            ]
+                        },
+                        "referrers": [
+                            {
+                                "referrer": "example referrer",
+                                "clicks": 42,
+                                "first_click": "example first_click",
+                                "last_click": "example last_click"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/geo-opens": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "code": "example code",
+                            "name": "example name",
+                            "opens": 42,
+                            "regions": [
+                                {
+                                    "code": "example code",
+                                    "name": "example name",
+                                    "opens": 42
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/google-analytics": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "visits": 42,
+                            "pages": 42,
+                            "new_visits": 42,
+                            "bounces": 42,
+                            "time_on_site": 3.14159,
+                            "goal_conversions": 42,
+                            "goal_value": 3.14159,
+                            "revenue": 3.14159,
+                            "transactions": 42,
+                            "ecomm_conversions": 42,
+                            "goals": [
+                                {
+                                    "name": "example name",
+                                    "conversions": 42
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/member-activity": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "emails": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "msg": "example msg"
+                            }
+                        ],
+                        "data": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "member": {
+                                    "...": "..."
+                                },
+                                "activity": [
+                                    {
+                                        "action": "example action",
+                                        "timestamp": "example timestamp",
+                                        "url": "example url",
+                                        "ip": "example ip"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/not-opened": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": ["..."]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/opened": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42,
+                        "sort_field": "example sort_field",
+                        "sort_dir": "example sort_dir"
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "member": {
+                                    "...": "..."
+                                },
+                                "opens": 42
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/sent-to": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "status": "example status",
+                        "start": 42,
+                        "limit": 42
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "member": {
+                                    "...": "..."
+                                },
+                                "status": "example status",
+                                "absplit_group": "example absplit_group",
+                                "tz_group": "example tz_group"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/share": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": ["..."]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "title": "example title",
+                        "url": "example url",
+                        "secure_url": "example secure_url",
+                        "password": "example password"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/summary": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "syntax_errors": 42,
+                        "hard_bounces": 42,
+                        "soft_bounces": 42,
+                        "unsubscribes": 42,
+                        "abuse_reports": 42,
+                        "forwards": 42,
+                        "forwards_opens": 42,
+                        "opens": 42,
+                        "last_open": "example last_open",
+                        "unique_opens": 42,
+                        "clicks": 42,
+                        "unique_clicks": 42,
+                        "last_click": "example last_click",
+                        "users_who_clicked": 42,
+                        "emails_sent": 42,
+                        "unique_likes": 42,
+                        "recipient_likes": 42,
+                        "facebook_likes": 42,
+                        "industry": {
+                            "type": "example type",
+                            "open_rate": 3.14159,
+                            "click_rate": 3.14159,
+                            "bounce_rate": 3.14159,
+                            "unopen_rate": 3.14159,
+                            "unsub_rate": 3.14159,
+                            "abuse_rate": 3.14159
+                        },
+                        "absplit": {
+                            "bounces_a": 42,
+                            "bounces_b": 42,
+                            "forwards_a": 42,
+                            "forwards_b": 42,
+                            "abuse_reports_a": 42,
+                            "abuse_reports_b": 42,
+                            "unsubs_a": 42,
+                            "unsubs_b": 42,
+                            "recipients_click_a": 42,
+                            "recipients_click_b": 42,
+                            "forwards_opens_a": 42,
+                            "forwards_opens_b": 42,
+                            "opens_a": 42,
+                            "opens_b": 42,
+                            "last_open_a": "example last_open_a",
+                            "last_open_b": "example last_open_b",
+                            "unique_opens_a": 42,
+                            "unique_opens_b": 42
+                        },
+                        "timewarp": [
+                            {
+                                "opens": 42,
+                                "last_open": "example last_open",
+                                "unique_opens": 42,
+                                "clicks": 42,
+                                "last_click": "example last_click",
+                                "bounces": 42,
+                                "total": 42,
+                                "sent": 42
+                            }
+                        ],
+                        "timeseries": [
+                            {
+                                "timestamp": "example timestamp",
+                                "emails_sent": 42,
+                                "unique_opens": 42,
+                                "recipients_click": 42
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "reports\/unsubscribes": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "cid": "example cid",
+                    "opts": {
+                        "start": 42,
+                        "limit": 42
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "total": 42,
+                        "data": [
+                            {
+                                "member": "example member",
+                                "reason": "example reason",
+                                "reason_text": "example reason_text"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "name": "example name",
+                    "html": "example html",
+                    "folder_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "template_id": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "template_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/info": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "template_id": 42,
+                    "type": "example type"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "default_content": {
+                            "...": "..."
+                        },
+                        "sections": {
+                            "...": "..."
+                        },
+                        "source": "example source",
+                        "preview": "example preview"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "types": {
+                        "user": true,
+                        "gallery": true,
+                        "base": true
+                    },
+                    "filters": {
+                        "category": "example category",
+                        "folder_id": "example folder_id",
+                        "include_inactive": true,
+                        "inactive_only": true,
+                        "include_drag_and_drop": true
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "user": ["..."],
+                        "gallery": ["..."],
+                        "base": ["..."]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/undel": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "template_id": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "templates\/update": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "template_id": 42,
+                    "values": {
+                        "name": "example name",
+                        "html": "example html",
+                        "folder_id": 42
+                    }
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "complete": true
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/invite": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "email": "example email",
+                    "role": "example role",
+                    "msg": "example msg"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "status": "example status"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/invite-resend": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "email": "example email"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "status": "example status"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/invite-revoke": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "email": "example email"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "status": "example status"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/invites": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "email": "example email",
+                            "role": "example role",
+                            "sent_at": "example sent_at",
+                            "expiration": "example expiration",
+                            "msg": "example msg"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/login-revoke": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "username": "example username"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "status": "example status"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/logins": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "id": 42,
+                            "username": "example username",
+                            "name": "example name",
+                            "email": "example email",
+                            "role": "example role",
+                            "avatar": "example avatar",
+                            "global_user_id": 42,
+                            "dc_unique_id": "example dc_unique_id"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "users\/profile": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "id": 42,
+                        "username": "example username",
+                        "name": "example name",
+                        "email": "example email",
+                        "role": "example role",
+                        "avatar": "example avatar",
+                        "global_user_id": 42,
+                        "dc_unique_id": "example dc_unique_id",
+                        "account_name": "example account_name"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "vip\/activity": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "action": "example action",
+                            "timestamp": "example timestamp",
+                            "url": "example url",
+                            "unique_id": "example unique_id",
+                            "title": "example title",
+                            "list_name": "example list_name",
+                            "list_id": "example list_id",
+                            "email": "example email",
+                            "fname": "example fname",
+                            "lname": "example lname",
+                            "member_rating": 42,
+                            "member_since": "example member_since",
+                            "geo": {
+                                "latitude": "example latitude",
+                                "longitude": "example longitude",
+                                "gmtoff": "example gmtoff",
+                                "dstoff": "example dstoff",
+                                "timezone": "example timezone",
+                                "cc": "example cc",
+                                "region": "example region"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "vip\/add": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "emails": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "code": "example code",
+                                "error": "example error"
+                            }
+                        ],
+                        "data": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "vip\/del": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "id": "example id",
+                    "emails": [
+                        {
+                            "email": "example email",
+                            "euid": "example euid",
+                            "leid": "example leid"
+                        }
+                    ]
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "success_count": 42,
+                        "error_count": 42,
+                        "errors": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                },
+                                "code": "example code",
+                                "msg": "example msg"
+                            }
+                        ],
+                        "data": [
+                            {
+                                "email": {
+                                    "email": "example email",
+                                    "euid": "example euid",
+                                    "leid": "example leid"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "vip\/members": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": [
+                        {
+                            "list_id": "example list_id",
+                            "list_name": "example list_name",
+                            "email": "example email",
+                            "fname": "example fname",
+                            "lname": "example lname",
+                            "member_rating": 42,
+                            "member_since": "example member_since"
+                        }
+                    ]
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "goal\/events": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "list_id": "example list_id",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "start": 42,
+                    "limit": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "data": [
+                            {
+                                "event": "example event",
+                                "last_visited_at": "example last_visited_at"
+                            }
+                        ],
+                        "total": 42
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "goal\/record-event": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "list_id": "example list_id",
+                    "email": {
+                        "email": "example email",
+                        "euid": "example euid",
+                        "leid": "example leid"
+                    },
+                    "campaign_id": "example campaign_id",
+                    "event": "example event"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "event": "example event",
+                        "last_visited_at": "example last_visited_at"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "conversations\/list": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "list_id": "example list_id",
+                    "leid": "example leid",
+                    "campaign_id": "example campaign_id",
+                    "start": 42,
+                    "limit": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "count": 42,
+                        "data": [
+                            {
+                                "unique_id": "example unique_id",
+                                "message_count": 42,
+                                "campaign_id": "example campaign_id",
+                                "list_id": "example list_id",
+                                "unread_messages": 42,
+                                "from_label": "example from_label",
+                                "from_email": "example from_email",
+                                "subject": "example subject",
+                                "timestamp": "example timestamp",
+                                "last_message": {
+                                    "from_label": "example from_label",
+                                    "from_email": "example from_email",
+                                    "subject": "example subject",
+                                    "message": "example message",
+                                    "read": true,
+                                    "timestamp": "example timestamp"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "conversations\/messages": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "conversation_id": "example conversation_id",
+                    "mark_as_read": true,
+                    "start": 42,
+                    "limit": 42
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "count": 42,
+                        "data": [
+                            {
+                                "from_label": "example from_label",
+                                "from_email": "example from_email",
+                                "subject": "example subject",
+                                "message": "example message",
+                                "read": true,
+                                "timestamp": "example timestamp"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
+    },
+    "conversations\/reply": {
+        "get": [
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": "Only user POST requests"
+                }
+            }
+        ],
+        "post": [
+            {
+                "params": {
+                    "apikey": "example apikey",
+                    "conversation_id": "example conversation_id",
+                    "message": "example message"
+                },
+                "response": {
+                    "httpcode": 200,
+                    "body": {
+                        "from_label": "example from_label",
+                        "from_email": "example from_email",
+                        "subject": "example subject",
+                        "message": "example message",
+                        "read": true,
+                        "timestamp": "example timestamp"
+                    }
+                }
+            },
+            {
+                "response": {
+                    "httpcode": 400,
+                    "body": {
+                        "status": "error",
+                        "code": -99,
+                        "name": "Unknown_Exception",
+                        "error": "An unknown error occurred processing your request.  Please try again later."
+                    }
+                }
+            }
+        ]
     }
-}
+}}

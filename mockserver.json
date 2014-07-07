@@ -1,3 +1,17 @@
 {
-    "routes": {}
+    "meta": {
+        "name": "Placeholder MockServer definition file.",
+        "description": "Welcome page for the MockServer",
+        "author": "Matt Parker, Lamplight Database Systems Limited 2014"
+    },
+    "routes": {
+        "/": {
+            "get": [{
+                "response": {
+                    "httpcode": 200,
+                    "body": "<h1>Welcome to MockServer.</h1><p>You need a server definition file to do anything interesting.  Read the README.md file for more help.</p>"
+                }
+            }]
+        }
+    }
 }
