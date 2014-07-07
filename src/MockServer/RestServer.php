@@ -73,7 +73,8 @@ class RestServer {
                 'request' => [
                     'path' => $path,
                     'params' => $params->all(),
-                    'method' => $request->getMethod()
+                    'method' => $request->getMethod(),
+                    'date' => date('Y-m-d H:i:s')
                 ],
                 'response' => [
                     'httpcode' => $response->getStatusCode(),

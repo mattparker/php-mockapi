@@ -1448,7 +1448,7 @@
             }
         ]
     },
-    "lists\/batch-subscribe": {
+    "lists\/batch-subscribe.json": {
         "get": [
             {
                 "response": {
