@@ -65,7 +65,7 @@ class RestServer {
             }
 
             $params = $request->query;
-            if ($request->getMethod() === 'post') {
+            if (strtoupper($request->getMethod()) === 'POST') {
                 $params = $request->request;
             }
 

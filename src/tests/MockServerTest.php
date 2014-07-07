@@ -157,4 +157,22 @@ class MockServerTest extends WebTestCase {
         $this->assertTrue($response->isOk());
         $this->assertEquals("hi", $response->getContent());
     }
+
+
+    public function test_posted_params_are_retrieved () {
+        $client = $this->createClient();
+        $client->request('POST', '/testing/params', ["a" => 13]);
+        $response = $client->getResponse();
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("Unlucky", $response->getContent());
+    }
+
+
+    public function test_posted_params_as_json_string () {
+        $client = $this->createClient();
+        $client->request('POST', '/testing/params', [], [], ['CONTENT_TYPE' => 'application/json'], json_encode(["a" => 13]));
+        $response = $client->getResponse();
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("Unlucky", $response->getContent());
+    }
 } 

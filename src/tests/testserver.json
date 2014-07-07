@@ -48,6 +48,16 @@
                         "body": "b was three"
                     }
                 }
+            ],
+            "post": [
+                {
+                    "params": {
+                        "a": 13
+                    },
+                    "response": {
+                        "body": "Unlucky"
+                    }
+                }
             ]
         },
 

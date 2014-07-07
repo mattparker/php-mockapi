@@ -2823,7 +2823,7 @@
             }
         ]
     },
-    "lists\/static-segment-add": {
+    "lists\/static-segment-add.json": {
         "get": [
             {
                 "response": {
@@ -2835,9 +2835,9 @@
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
-                    "id": "example id",
-                    "name": "example name"
+                    "apikey": "example apikey-us7",
+                    "id": "example listid",
+                    "name": "All organisations (LL 5)"
                 },
                 "response": {
                     "httpcode": 200,

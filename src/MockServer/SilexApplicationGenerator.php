@@ -9,6 +9,7 @@
 namespace MockServer;
 
 use Silex\Application;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class SilexApplicationGenerator
@@ -59,8 +60,19 @@ class SilexApplicationGenerator {
                 call_user_func_array([$app, $method], [$route, $callback]);
             }
         }
+
+        $this->addJsonParser($app);
     }
 
+
+    protected function addJsonParser (Application $app) {
+        $app->before(function (Request $request) {
+            if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
+                $data = json_decode($request->getContent(), true);
+                $request->request->replace(is_array($data) ? $data : array());
+            }
+        });
+    }
 
     /**
      * @param SilexApplicationHandlerSet $handler
