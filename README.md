@@ -36,7 +36,6 @@ parameter matches.
 The json file should look something like this:
 
 ```json
-
 {
     "routes": {
 
@@ -98,6 +97,16 @@ anything will match.  So a request with parameters that do not match exactly any
 return the same as an empty request.
 
 The default value for `httpcode` is 200, and for `body` is '', the empty string.
+
+
+Before starting the php server, you can use environment variables to set the definitions and data storage files:
+
+```bash
+mockserver$ export MOCKSERVER_DEFINITION=/path/to/your/server_definition.json
+mockserver$ export MOCKSERVER_DATAFILE=/path/to/save/data/to.txt
+```
+
+These are optional: it will use `./mockserver.json` and `data/requests.txt` if they are not specified.
 
 
 ### Start the php server
