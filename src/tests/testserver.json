@@ -62,6 +62,16 @@
                     }
                 }
             ]
+        },
+
+        "path\/escaped": {
+            "get": [
+                {
+                    "response": {
+                        "body": "hi"
+                    }
+                }
+            ]
         }
     }
 }

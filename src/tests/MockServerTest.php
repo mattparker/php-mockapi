@@ -14,12 +14,16 @@ class MockServerTest extends WebTestCase {
 
 
     public function createApplication () {
-        $app_env = 'test';
-
-        $ret = require __DIR__ . '/../../index.php';
 
         // clear out requests
         file_put_contents(__DIR__ . '/testrequests.txt', '');
+
+        // These are the test files server definition files:
+        $default_definition_file = __DIR__ . '/testserver.json';
+        $default_datafile = __DIR__ . '/testrequests.txt';
+        $ret = require __DIR__ . '/../../app.php';
+
+
         return $ret;
     }
 
@@ -144,4 +148,13 @@ class MockServerTest extends WebTestCase {
         $this->assertEquals(0, count($all_arr));
     }
 
+
+    public function test_with_escaped_paths_in_serverfile () {
+        $client = $this->createClient();
+        $client->request('GET', '/path/escaped');
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("hi", $response->getContent());
+    }
 } 
