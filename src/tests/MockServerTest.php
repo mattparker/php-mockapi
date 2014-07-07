@@ -106,7 +106,7 @@ class MockServerTest extends WebTestCase {
         $client->request('GET', "/testing/params?a=2&b=3");
 
         // now get them back
-        $client->request('GET', '/__mockserver/show/all');
+        $client->request('GET', '/__mockserver/show/all', [], [], ['CONTENT_TYPE' => 'application/json']);
         $all_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals(4, count($all_arr));
 
@@ -122,7 +122,7 @@ class MockServerTest extends WebTestCase {
         $this->assertEquals(200, $all_arr[3]->response->httpcode);
 
         // now get a single one
-        $client->request('GET', '/__mockserver/show/1');
+        $client->request('GET', '/__mockserver/show/1', [], [], ['CONTENT_TYPE' => 'application/json']);
         $one_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals("/testing/params", $one_arr->request->path);
         $this->assertEquals((object)["a" => 2], $one_arr->request->params);
@@ -130,7 +130,7 @@ class MockServerTest extends WebTestCase {
         $this->assertEquals(200, $one_arr->response->httpcode);
 
         // now get the last one
-        $client->request('GET', '/__mockserver/show/last');
+        $client->request('GET', '/__mockserver/show/last', [], [], ['CONTENT_TYPE' => 'application/json']);
         $one_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals("/testing/params", $one_arr->request->path);
         $this->assertEquals((object)["a" => 2, "b" => 3], $one_arr->request->params);
@@ -143,7 +143,7 @@ class MockServerTest extends WebTestCase {
         $this->assertTrue($client->getResponse()->isOk());
 
         // and check there's none left
-        $client->request('GET', '/__mockserver/show/all');
+        $client->request('GET', '/__mockserver/show/all', [], [], ['CONTENT_TYPE' => 'application/json']);
         $all_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals(0, count($all_arr));
     }

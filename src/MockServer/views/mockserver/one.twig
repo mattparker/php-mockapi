@@ -1,0 +1,24 @@
+<h2>{{ request.method }} {{ request.path }} </h2>
+<span>(at {{ request.date }})</span>
+<dl>
+
+    <dt>params</dt>
+    <dd>
+
+        <dl>
+            {% for key, param in request.params %}
+                <dt>{{ key }}</dt>
+                <dd>{{ param }}</dd>
+            {% endfor %}
+        </dl>
+    </dd>
+</dl>
+
+<h2>response</h2>
+<dl>
+    <dt>httpcode</dt>
+    <dd>{{ response.httpcode }}</dd>
+
+    <dt>content</dt>
+    <dd>{{ response.content }}</dd>
+</dl>

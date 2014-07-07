@@ -13,7 +13,7 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
+use Silex\Provider\TwigServiceProvider;
 
 /**
  * Class RestServer
@@ -130,19 +130,35 @@ class RestServer {
 
         $data_store = $this->store;
 
-        $show_function = function (Application $app, $id) use ($data_store) {
+        $show_function = function (Application $app, Request $request, $id) use ($data_store) {
 
             $resp = $data_store->fetch($id);
+            $response_code = 200;
 
             if (!in_array($id, ['all', 'last']) && count($resp) === 0) {
-                return new JsonResponse(["error" => true, "msg" => "Item {$id} not found"], 404);
+                $resp = ["error" => true, "msg" => "Item {$id} not found"];
+                $response_code = 404;
             }
-            return new JsonResponse($resp);
+
+
+            if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
+                return new JsonResponse($resp, $response_code);
+            }
+
+            $template = 'one';
+            if ($id === 'all') {
+                $template = 'all';
+                $resp = ['data' => $resp];
+            }
+            return $this->app['twig']->render('mockserver/' . $template . '.twig', $resp);
+            return new Response(var_export($resp, true), $response_code);
 
         };
 
         $this->app->get('__mockserver/show/{id}', $show_function);
-
+        $this->app->register(new TwigServiceProvider(), array(
+            'twig.path' => __DIR__.'/views',
+        ));
     }
 
 } 

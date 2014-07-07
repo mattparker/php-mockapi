@@ -1,0 +1,33 @@
+<h1>Mockserver</h1>
+
+<h2>request</h2>
+<dl>
+    <dt>path</dt>
+    <dd>{{ request.path }}</dd>
+
+    <dt>date</dt>
+    <dd>{{ request.date }}</dd>
+
+    <dt>method</dt>
+    <dd>{{ request.method }}</dd>
+
+    <dt>params</dt>
+    <dd>
+
+        <dl>
+            {% for key, param in request.params %}
+                <dt>{{ key }}</dt>
+                <dd>{{ param }}</dd>
+            {% endfor %}
+        </dl>
+    </dd>
+</dl>
+
+<h2>response</h2>
+<dl>
+    <dt>httpcode</dt>
+    <dd>{{ response.httpcode }}</dd>
+
+    <dt>content</dt>
+    <dd>{{ response.content }}</dd>
+</dl>

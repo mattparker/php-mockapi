@@ -1,0 +1,9 @@
+<h1>All items</h1>
+{% if data|length > 0 %}
+    {% for item in data %}
+        {% include 'mockserver/one.twig' with item %}
+
+    {% endfor %}
+{% else %}
+No items found
+{% endif %}

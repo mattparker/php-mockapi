@@ -44,7 +44,7 @@ if (!file_exists($default_datafile)) {
 
 
 $app = new Silex\Application();
-
+$app['debug'] = true;
 
 
 
