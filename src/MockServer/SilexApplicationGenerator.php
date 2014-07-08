@@ -51,7 +51,7 @@ class SilexApplicationGenerator {
             $this->addHandlerSetToApplication($app, $handlerset);
         }
 
-        $this->addApiAddedRoute($app);
+        //$this->addApiAddedRoute($app);
 
         $this->addJsonParser($app);
 
@@ -109,6 +109,7 @@ class SilexApplicationGenerator {
      */
     protected function addApiAddedRoute(Application $app)
     {
+        return;
         if ($app['session']) {
             $added_routes = $app['session']->get('added_route');
             if ($added_routes) {

@@ -45,9 +45,9 @@ if (!file_exists($default_datafile)) {
 
 $app = new Silex\Application();
 $app['debug'] = true;
-$app->register(new Silex\Provider\SessionServiceProvider());
-$app['session.test'] = true;
-$app['session']->set('added_routes', null);
+//$app->register(new Silex\Provider\SessionServiceProvider());
+//$app['session.test'] = true;
+//$app['session']->set('added_routes', null);
 
 
 

@@ -101,7 +101,7 @@ class RestServer {
     public function addApiRoutes () {
         $this->addClearRoute();
         $this->addShowRoute();
-        $this->addAddRoute();
+        //$this->addAddRoute();
         return $this;
     }
 
@@ -171,6 +171,7 @@ class RestServer {
      */
     protected function addAddRoute () {
 
+        return;
         $add_function = function (Application $app, Request $request) {
 
             $route_info = $request->request->all();
