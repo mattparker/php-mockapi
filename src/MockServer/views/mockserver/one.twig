@@ -8,7 +8,13 @@
         <dl>
             {% for key, param in request.params %}
                 <dt>{{ key }}</dt>
-                <dd>{{ param }}</dd>
+                <dd>
+                    {% if param is iterable %}
+                        {{ dump(param) }}
+                    {% else %}
+                        {{ param }}
+                    {% endif %}
+                </dd>
             {% endfor %}
         </dl>
     </dd>
@@ -20,5 +26,11 @@
     <dd>{{ response.httpcode }}</dd>
 
     <dt>content</dt>
-    <dd>{{ response.content }}</dd>
+    <dd>
+        {% if response.content is iterable %}
+
+        {% else %}
+           {{ response.content }}
+        {% endif %}
+    </dd>
 </dl>
