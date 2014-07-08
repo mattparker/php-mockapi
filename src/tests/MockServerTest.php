@@ -175,4 +175,140 @@ class MockServerTest extends WebTestCase {
         $this->assertTrue($response->isOk());
         $this->assertEquals("Unlucky", $response->getContent());
     }
+
+
+    public function test_we_can_add_a_route () {
+
+        $newRoute = [
+            'new/route' => [
+                'get' => [
+                    [
+                        'response' => [
+                            'body' => 'Hello there new route'
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $contentType = ['CONTENT_TYPE' => 'application/json'];
+
+
+        $client = $this->createClient();
+
+        $client->request('POST', '__mockserver/add', [], [], $contentType, json_encode($newRoute));
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("ok", $response->getContent());
+
+        // Now test if we can use the new route
+        $client = $this->createClient();
+        $client->request('GET', '/new/route');
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("Hello there new route", $response->getContent());
+    }
+
+
+
+    public function test_we_can_add_a_route_with_params () {
+
+        $newRoute = [
+            'new/route' => [
+                'get' => [
+                    [
+
+                        'params' => [
+                            'g' => 5
+                        ],
+                        'response' => [
+                            'body' => 'Hello there new route g5'
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $contentType = ['CONTENT_TYPE' => 'application/json'];
+
+
+        $client = $this->createClient();
+
+        $client->request('POST', '__mockserver/add', [], [], $contentType, json_encode($newRoute));
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("ok", $response->getContent());
+
+        // Now test if we can use the new route
+        $client = $this->createClient();
+        $client->request('GET', '/new/route?g=5');
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("Hello there new route g5", $response->getContent());
+    }
+
+
+    public function test_that_a_second_route_replaces_the_first () {
+        $newRoute = [
+            'new/route' => [
+                'get' => [
+                    [
+
+                        'params' => [
+                            'g' => 5
+                        ],
+                        'response' => [
+                            'body' => 'Hello there new route g5'
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $contentType = ['CONTENT_TYPE' => 'application/json'];
+
+        $client = $this->createClient();
+
+        $client->request('POST', '__mockserver/add', [], [], $contentType, json_encode($newRoute));
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("ok", $response->getContent());
+
+        $newRoute2 = [
+            'new/route' => [
+                'get' => [
+                    [
+
+                        'params' => [
+                            'g' => 55
+                        ],
+                        'response' => [
+                            'body' => 'That is 55'
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $client->request('POST', '/__mockserver/add', [], [], $contentType, json_encode($newRoute2));
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("ok", $response->getContent());
+
+        // Now test if we can use the new route
+        $client = $this->createClient();
+        $client->request('GET', '/new/route?g=5');
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("", $response->getContent());
+
+        $client->request('GET', '/new/route?g=55');
+        $response = $client->getResponse();
+
+        $this->assertTrue($response->isOk());
+        $this->assertEquals("That is 55", $response->getContent());
+    }
 } 

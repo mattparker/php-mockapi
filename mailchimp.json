@@ -3,7 +3,7 @@
     "description": "Auto-generated documents for the MockServer Mailchimp server definition file.  Generated automatically from API docs http:\/\/apidocs.mailchimp.com\/api\/2.0\/",
     "version": "2.0"
 }, "routes": {
-    "campaigns\/content": {
+    "campaigns\/content.json": {
         "get": [
             {
                 "response": {
@@ -15,7 +15,7 @@
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "options": {
                         "view": "example view",
@@ -47,19 +47,19 @@
             }
         ]
     },
-    "campaigns\/create": {
+    "campaigns\/create.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "type": "example type",
                     "options": {
                         "list_id": "example list_id",
@@ -192,19 +192,19 @@
             }
         ]
     },
-    "campaigns\/delete": {
+    "campaigns\/delete.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -227,19 +227,19 @@
             }
         ]
     },
-    "campaigns\/list": {
+    "campaigns\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "filters": {
                         "campaign_id": "example campaign_id",
                         "parent_id": "example parent_id",
@@ -345,19 +345,19 @@
             }
         ]
     },
-    "campaigns\/pause": {
+    "campaigns\/pause.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -380,19 +380,19 @@
             }
         ]
     },
-    "campaigns\/ready": {
+    "campaigns\/ready.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -422,19 +422,19 @@
             }
         ]
     },
-    "campaigns\/replicate": {
+    "campaigns\/replicate.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -457,19 +457,19 @@
             }
         ]
     },
-    "campaigns\/resume": {
+    "campaigns\/resume.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -492,19 +492,19 @@
             }
         ]
     },
-    "campaigns\/schedule-batch": {
+    "campaigns\/schedule-batch.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "schedule_time": "example schedule_time",
                     "num_batches": 42,
@@ -530,19 +530,19 @@
             }
         ]
     },
-    "campaigns\/schedule": {
+    "campaigns\/schedule.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "schedule_time": "example schedule_time",
                     "schedule_time_b": "example schedule_time_b"
@@ -567,19 +567,19 @@
             }
         ]
     },
-    "campaigns\/segment-test": {
+    "campaigns\/segment-test.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "list_id": "example list_id",
                     "options": {
                         "saved_segment_id": "example saved_segment_id",
@@ -607,19 +607,19 @@
             }
         ]
     },
-    "campaigns\/send": {
+    "campaigns\/send.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -642,19 +642,19 @@
             }
         ]
     },
-    "campaigns\/send-test": {
+    "campaigns\/send-test.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "test_emails": ["..."],
                     "send_type": "example send_type"
@@ -679,19 +679,19 @@
             }
         ]
     },
-    "campaigns\/template-content": {
+    "campaigns\/template-content.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -714,19 +714,19 @@
             }
         ]
     },
-    "campaigns\/unschedule": {
+    "campaigns\/unschedule.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -749,19 +749,19 @@
             }
         ]
     },
-    "campaigns\/update": {
+    "campaigns\/update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "name": "example name",
                     "value": ["..."]
@@ -795,19 +795,19 @@
             }
         ]
     },
-    "ecomm\/order-add": {
+    "ecomm\/order-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "order": {
                         "id": "example id",
                         "campaign_id": "example campaign_id",
@@ -853,19 +853,19 @@
             }
         ]
     },
-    "ecomm\/order-del": {
+    "ecomm\/order-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "store_id": "example store_id",
                     "order_id": "example order_id"
                 },
@@ -889,19 +889,19 @@
             }
         ]
     },
-    "ecomm\/orders": {
+    "ecomm\/orders.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "start": 42,
                     "limit": 42,
@@ -951,19 +951,19 @@
             }
         ]
     },
-    "folders\/add": {
+    "folders\/add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "name": "example name",
                     "type": "example type"
                 },
@@ -987,19 +987,19 @@
             }
         ]
     },
-    "folders\/del": {
+    "folders\/del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "fid": 42,
                     "type": "example type"
                 },
@@ -1023,19 +1023,19 @@
             }
         ]
     },
-    "folders\/list": {
+    "folders\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "type": "example type"
                 },
                 "response": {
@@ -1064,19 +1064,19 @@
             }
         ]
     },
-    "folders\/update": {
+    "folders\/update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "fid": 42,
                     "name": "example name",
                     "type": "example type"
@@ -1101,19 +1101,19 @@
             }
         ]
     },
-    "gallery\/add-file-to-folder": {
+    "gallery\/add-file-to-folder.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "file_id": 42,
                     "folder_id": 42
                 },
@@ -1135,19 +1135,19 @@
             }
         ]
     },
-    "gallery\/add-folder": {
+    "gallery\/add-folder.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "name": "example name"
                 },
                 "response": {
@@ -1170,19 +1170,19 @@
             }
         ]
     },
-    "gallery\/list": {
+    "gallery\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "opts": {
                         "type": "example type",
                         "start": 42,
@@ -1223,19 +1223,19 @@
             }
         ]
     },
-    "gallery\/list-folders": {
+    "gallery\/list-folders.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "opts": {
                         "start": 42,
                         "limit": 42,
@@ -1269,19 +1269,19 @@
             }
         ]
     },
-    "gallery\/remove-all-files-from-folder": {
+    "gallery\/remove-all-files-from-folder.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "folder_id": 42
                 },
                 "response": {
@@ -1302,19 +1302,19 @@
             }
         ]
     },
-    "gallery\/remove-file-from-folder": {
+    "gallery\/remove-file-from-folder.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "file_id": 42,
                     "folder_id": 42
                 },
@@ -1336,19 +1336,19 @@
             }
         ]
     },
-    "gallery\/remove-folder": {
+    "gallery\/remove-folder.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "folder_id": 42
                 },
                 "response": {
@@ -1369,19 +1369,19 @@
             }
         ]
     },
-    "lists\/abuse-reports": {
+    "lists\/abuse-reports.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "start": 42,
                     "limit": 42,
@@ -1415,19 +1415,19 @@
             }
         ]
     },
-    "lists\/activity": {
+    "lists\/activity.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id"
                 },
                 "response": {
@@ -1453,15 +1453,15 @@
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
-                    "id": "example id",
+                    "apikey": "example apikey-us7",
+                    "id": "example listid",
                     "batch": [
                         {
                             "email": {
@@ -1529,19 +1529,19 @@
             }
         ]
     },
-    "lists\/batch-unsubscribe": {
+    "lists\/batch-unsubscribe.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "batch": [
                         {
@@ -1588,19 +1588,19 @@
             }
         ]
     },
-    "lists\/clients": {
+    "lists\/clients.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id"
                 },
                 "response": {
@@ -1644,19 +1644,19 @@
             }
         ]
     },
-    "lists\/growth-history": {
+    "lists\/growth-history.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id"
                 },
                 "response": {
@@ -1684,19 +1684,19 @@
             }
         ]
     },
-    "lists\/interest-group-add": {
+    "lists\/interest-group-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "group_name": "example group_name",
                     "grouping_id": 42
@@ -1721,19 +1721,19 @@
             }
         ]
     },
-    "lists\/interest-group-del": {
+    "lists\/interest-group-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "group_name": "example group_name",
                     "grouping_id": 42
@@ -1758,19 +1758,19 @@
             }
         ]
     },
-    "lists\/interest-group-update": {
+    "lists\/interest-group-update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "old_name": "example old_name",
                     "new_name": "example new_name",
@@ -1796,19 +1796,19 @@
             }
         ]
     },
-    "lists\/interest-grouping-add": {
+    "lists\/interest-grouping-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "name": "example name",
                     "type": "example type",
@@ -1834,19 +1834,19 @@
             }
         ]
     },
-    "lists\/interest-grouping-del": {
+    "lists\/interest-grouping-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "grouping_id": 42
                 },
                 "response": {
@@ -1869,19 +1869,19 @@
             }
         ]
     },
-    "lists\/interest-grouping-update": {
+    "lists\/interest-grouping-update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "grouping_id": 42,
                     "name": "example name",
                     "value": "example value"
@@ -1906,19 +1906,19 @@
             }
         ]
     },
-    "lists\/interest-groupings": {
+    "lists\/interest-groupings.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "counts": true
                 },
@@ -1954,19 +1954,19 @@
             }
         ]
     },
-    "lists\/list": {
+    "lists\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "filters": {
                         "list_id": "example list_id",
                         "list_name": "example list_name",
@@ -2046,19 +2046,19 @@
             }
         ]
     },
-    "lists\/locations": {
+    "lists\/locations.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id"
                 },
                 "response": {
@@ -2079,19 +2079,19 @@
             }
         ]
     },
-    "lists\/member-activity": {
+    "lists\/member-activity.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "emails": [
                         {
@@ -2154,19 +2154,19 @@
             }
         ]
     },
-    "lists\/member-info": {
+    "lists\/member-info.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "emails": [
                         {
@@ -2278,19 +2278,19 @@
             }
         ]
     },
-    "lists\/members": {
+    "lists\/members.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "status": "example status",
                     "opts": {
@@ -2324,19 +2324,19 @@
             }
         ]
     },
-    "lists\/merge-var-add": {
+    "lists\/merge-var-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "tag": "example tag",
                     "name": "example name",
@@ -2385,19 +2385,19 @@
             }
         ]
     },
-    "lists\/merge-var-del": {
+    "lists\/merge-var-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "tag": "example tag"
                 },
@@ -2421,19 +2421,19 @@
             }
         ]
     },
-    "lists\/merge-var-reset": {
+    "lists\/merge-var-reset.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "tag": "example tag"
                 },
@@ -2457,19 +2457,19 @@
             }
         ]
     },
-    "lists\/merge-var-set": {
+    "lists\/merge-var-set.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "tag": "example tag",
                     "value": "example value"
@@ -2494,19 +2494,19 @@
             }
         ]
     },
-    "lists\/merge-var-update": {
+    "lists\/merge-var-update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "tag": "example tag",
                     "options": {
@@ -2544,19 +2544,19 @@
             }
         ]
     },
-    "lists\/merge-vars": {
+    "lists\/merge-vars.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": ["..."]
                 },
                 "response": {
@@ -2609,19 +2609,19 @@
             }
         ]
     },
-    "lists\/segment-add": {
+    "lists\/segment-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "opts": {
                         "type": "example type",
@@ -2652,19 +2652,19 @@
             }
         ]
     },
-    "lists\/segment-del": {
+    "lists\/segment-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42
                 },
@@ -2688,19 +2688,19 @@
             }
         ]
     },
-    "lists\/segment-test": {
+    "lists\/segment-test.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "list_id": "example list_id",
                     "options": {
                         "...": "..."
@@ -2726,19 +2726,19 @@
             }
         ]
     },
-    "lists\/segment-update": {
+    "lists\/segment-update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42,
                     "opts": {
@@ -2769,19 +2769,19 @@
             }
         ]
     },
-    "lists\/segments": {
+    "lists\/segments.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "type": "example type"
                 },
@@ -2828,7 +2828,7 @@
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
@@ -2837,7 +2837,7 @@
                 "params": {
                     "apikey": "example apikey-us7",
                     "id": "example listid",
-                    "name": "All organisations (LL 5)"
+                    "name": "Case 4 (LL 68)"
                 },
                 "response": {
                     "httpcode": 200,
@@ -2859,19 +2859,19 @@
             }
         ]
     },
-    "lists\/static-segment-del": {
+    "lists\/static-segment-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42
                 },
@@ -2895,19 +2895,19 @@
             }
         ]
     },
-    "lists\/static-segment-members-add": {
+    "lists\/static-segment-members-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42,
                     "batch": [
@@ -2949,19 +2949,19 @@
             }
         ]
     },
-    "lists\/static-segment-members-del": {
+    "lists\/static-segment-members-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42,
                     "batch": [
@@ -3004,19 +3004,19 @@
             }
         ]
     },
-    "lists\/static-segment-reset": {
+    "lists\/static-segment-reset.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "seg_id": 42
                 },
@@ -3040,19 +3040,19 @@
             }
         ]
     },
-    "lists\/static-segments": {
+    "lists\/static-segments.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "get_counts": true,
                     "start": 42,
@@ -3085,19 +3085,19 @@
             }
         ]
     },
-    "lists\/subscribe": {
+    "lists\/subscribe.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "email": {
                         "email": "example email",
@@ -3157,19 +3157,19 @@
             }
         ]
     },
-    "lists\/unsubscribe": {
+    "lists\/unsubscribe.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "email": {
                         "email": "example email",
@@ -3200,19 +3200,19 @@
             }
         ]
     },
-    "lists\/update-member": {
+    "lists\/update-member.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "email": {
                         "email": "example email",
@@ -3245,19 +3245,19 @@
             }
         ]
     },
-    "lists\/webhook-add": {
+    "lists\/webhook-add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "url": "example url",
                     "actions": {
@@ -3294,19 +3294,19 @@
             }
         ]
     },
-    "lists\/webhook-del": {
+    "lists\/webhook-del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "url": "example url"
                 },
@@ -3330,19 +3330,19 @@
             }
         ]
     },
-    "lists\/webhooks": {
+    "lists\/webhooks.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id"
                 },
                 "response": {
@@ -3380,19 +3380,19 @@
             }
         ]
     },
-    "helper\/account-details": {
+    "helper\/account-details.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "exclude": ["..."]
                 },
                 "response": {
@@ -3467,19 +3467,19 @@
             }
         ]
     },
-    "helper\/campaigns-for-email": {
+    "helper\/campaigns-for-email.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "email": {
                         "email": "example email",
                         "euid": "example euid",
@@ -3515,19 +3515,19 @@
             }
         ]
     },
-    "helper\/chimp-chatter": {
+    "helper\/chimp-chatter.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -3556,19 +3556,19 @@
             }
         ]
     },
-    "helper\/generate-text": {
+    "helper\/generate-text.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "type": "example type",
                     "content": {
                         "html": "example html",
@@ -3599,19 +3599,19 @@
             }
         ]
     },
-    "helper\/inline-css": {
+    "helper\/inline-css.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "html": "example html",
                     "strip_css": true
                 },
@@ -3635,19 +3635,19 @@
             }
         ]
     },
-    "helper\/lists-for-email": {
+    "helper\/lists-for-email.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "email": {
                         "email": "example email",
                         "euid": "example euid",
@@ -3678,19 +3678,19 @@
             }
         ]
     },
-    "helper\/ping": {
+    "helper\/ping.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -3712,19 +3712,19 @@
             }
         ]
     },
-    "helper\/search-campaigns": {
+    "helper\/search-campaigns.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "query": "example query",
                     "offset": 42,
                     "snip_start": "example snip_start",
@@ -3755,19 +3755,19 @@
             }
         ]
     },
-    "helper\/search-members": {
+    "helper\/search-members.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "query": "example query",
                     "id": "example id",
                     "offset": 42
@@ -3799,19 +3799,19 @@
             }
         ]
     },
-    "helper\/verified-domains": {
+    "helper\/verified-domains.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -3837,19 +3837,19 @@
             }
         ]
     },
-    "reports\/abuse": {
+    "reports\/abuse.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -3878,19 +3878,19 @@
             }
         ]
     },
-    "reports\/advice": {
+    "reports\/advice.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -3916,19 +3916,19 @@
             }
         ]
     },
-    "reports\/bounce-message": {
+    "reports\/bounce-message.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "email": {
                         "email": "example email",
@@ -3960,19 +3960,19 @@
             }
         ]
     },
-    "reports\/bounce-messages": {
+    "reports\/bounce-messages.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -4009,19 +4009,19 @@
             }
         ]
     },
-    "reports\/click-detail": {
+    "reports\/click-detail.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "tid": 42,
                     "opts": {
@@ -4059,19 +4059,19 @@
             }
         ]
     },
-    "reports\/clicks": {
+    "reports\/clicks.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4123,19 +4123,19 @@
             }
         ]
     },
-    "reports\/domain-performance": {
+    "reports\/domain-performance.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4172,19 +4172,19 @@
             }
         ]
     },
-    "reports\/ecomm-orders": {
+    "reports\/ecomm-orders.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -4238,19 +4238,19 @@
             }
         ]
     },
-    "reports\/eepurl": {
+    "reports\/eepurl.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4308,19 +4308,19 @@
             }
         ]
     },
-    "reports\/geo-opens": {
+    "reports\/geo-opens.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4354,19 +4354,19 @@
             }
         ]
     },
-    "reports\/google-analytics": {
+    "reports\/google-analytics.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4406,19 +4406,19 @@
             }
         ]
     },
-    "reports\/member-activity": {
+    "reports\/member-activity.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "emails": ["..."]
                 },
@@ -4473,19 +4473,19 @@
             }
         ]
     },
-    "reports\/not-opened": {
+    "reports\/not-opened.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -4513,19 +4513,19 @@
             }
         ]
     },
-    "reports\/opened": {
+    "reports\/opened.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -4562,19 +4562,19 @@
             }
         ]
     },
-    "reports\/sent-to": {
+    "reports\/sent-to.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "status": "example status",
@@ -4612,19 +4612,19 @@
             }
         ]
     },
-    "reports\/share": {
+    "reports\/share.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": ["..."]
                 },
@@ -4651,19 +4651,19 @@
             }
         ]
     },
-    "reports\/summary": {
+    "reports\/summary.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid"
                 },
                 "response": {
@@ -4752,19 +4752,19 @@
             }
         ]
     },
-    "reports\/unsubscribes": {
+    "reports\/unsubscribes.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "cid": "example cid",
                     "opts": {
                         "start": 42,
@@ -4798,19 +4798,19 @@
             }
         ]
     },
-    "templates\/add": {
+    "templates\/add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "name": "example name",
                     "html": "example html",
                     "folder_id": 42
@@ -4835,19 +4835,19 @@
             }
         ]
     },
-    "templates\/del": {
+    "templates\/del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "template_id": 42
                 },
                 "response": {
@@ -4870,19 +4870,19 @@
             }
         ]
     },
-    "templates\/info": {
+    "templates\/info.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "template_id": 42,
                     "type": "example type"
                 },
@@ -4913,19 +4913,19 @@
             }
         ]
     },
-    "templates\/list": {
+    "templates\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "types": {
                         "user": true,
                         "gallery": true,
@@ -4961,19 +4961,19 @@
             }
         ]
     },
-    "templates\/undel": {
+    "templates\/undel.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "template_id": 42
                 },
                 "response": {
@@ -4996,19 +4996,19 @@
             }
         ]
     },
-    "templates\/update": {
+    "templates\/update.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "template_id": 42,
                     "values": {
                         "name": "example name",
@@ -5036,19 +5036,19 @@
             }
         ]
     },
-    "users\/invite": {
+    "users\/invite.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "email": "example email",
                     "role": "example role",
                     "msg": "example msg"
@@ -5073,19 +5073,19 @@
             }
         ]
     },
-    "users\/invite-resend": {
+    "users\/invite-resend.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "email": "example email"
                 },
                 "response": {
@@ -5108,19 +5108,19 @@
             }
         ]
     },
-    "users\/invite-revoke": {
+    "users\/invite-revoke.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "email": "example email"
                 },
                 "response": {
@@ -5143,19 +5143,19 @@
             }
         ]
     },
-    "users\/invites": {
+    "users\/invites.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -5183,19 +5183,19 @@
             }
         ]
     },
-    "users\/login-revoke": {
+    "users\/login-revoke.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "username": "example username"
                 },
                 "response": {
@@ -5218,19 +5218,19 @@
             }
         ]
     },
-    "users\/logins": {
+    "users\/logins.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -5261,19 +5261,19 @@
             }
         ]
     },
-    "users\/profile": {
+    "users\/profile.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -5303,19 +5303,19 @@
             }
         ]
     },
-    "vip\/activity": {
+    "vip\/activity.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -5359,19 +5359,19 @@
             }
         ]
     },
-    "vip\/add": {
+    "vip\/add.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "emails": [
                         {
@@ -5422,19 +5422,19 @@
             }
         ]
     },
-    "vip\/del": {
+    "vip\/del.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "id": "example id",
                     "emails": [
                         {
@@ -5485,19 +5485,19 @@
             }
         ]
     },
-    "vip\/members": {
+    "vip\/members.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey"
+                    "apikey": "example apikey-us7"
                 },
                 "response": {
                     "httpcode": 200,
@@ -5527,19 +5527,19 @@
             }
         ]
     },
-    "goal\/events": {
+    "goal\/events.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "list_id": "example list_id",
                     "email": {
                         "email": "example email",
@@ -5575,19 +5575,19 @@
             }
         ]
     },
-    "goal\/record-event": {
+    "goal\/record-event.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "list_id": "example list_id",
                     "email": {
                         "email": "example email",
@@ -5618,19 +5618,19 @@
             }
         ]
     },
-    "conversations\/list": {
+    "conversations\/list.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "list_id": "example list_id",
                     "leid": "example leid",
                     "campaign_id": "example campaign_id",
@@ -5678,19 +5678,19 @@
             }
         ]
     },
-    "conversations\/messages": {
+    "conversations\/messages.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "conversation_id": "example conversation_id",
                     "mark_as_read": true,
                     "start": 42,
@@ -5726,19 +5726,19 @@
             }
         ]
     },
-    "conversations\/reply": {
+    "conversations\/reply.json": {
         "get": [
             {
                 "response": {
                     "httpcode": 400,
-                    "body": "Only user POST requests"
+                    "body": "Only use POST requests"
                 }
             }
         ],
         "post": [
             {
                 "params": {
-                    "apikey": "example apikey",
+                    "apikey": "example apikey-us7",
                     "conversation_id": "example conversation_id",
                     "message": "example message"
                 },

@@ -100,6 +100,7 @@ class RestServer {
     public function addApiRoutes () {
         $this->addClearRoute();
         $this->addShowRoute();
+        $this->addAddRoute();
         return $this;
     }
 
@@ -159,6 +160,30 @@ class RestServer {
         $this->app->register(new TwigServiceProvider(), array(
             'twig.path' => __DIR__.'/views',
         ));
+    }
+
+
+    /**
+     * Adds a route to add a route!
+     *
+     * Means we can POST details (as per the .json structure) to add routes
+     * or append
+     */
+    protected function addAddRoute () {
+
+        $add_function = function (Application $app, Request $request) {
+
+            $route_info = $request->request;
+            foreach ($route_info as $route_name => $details) {
+                $handler_set = new SilexApplicationHandlerSet($route_name, $details);
+                $app_generator = new SilexApplicationGenerator([$handler_set]);
+                $app_generator->create($app);
+            }
+
+            return 'ok';
+        };
+
+        $this->app->post('__mockserver/add', $add_function);
     }
 
 } 

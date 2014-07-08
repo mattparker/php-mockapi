@@ -48,30 +48,51 @@ class SilexApplicationGenerator {
     public function create (Application $app) {
 
         foreach ($this->handlers as $handlerset) {
+            $this->addHandlerSetToApplication($app, $handlerset);
+        }
 
-            $route = $handlerset->getRoute();
+        $this->addJsonParser($app);
 
-            foreach ($handlerset as $handler) {
-                /** @var SilexApplicationHandler $handler $method */
+    }
 
-                $method = $handler->getMethod();
-                $callback = $handler->getHandler();
 
-                call_user_func_array([$app, $method], [$route, $callback]);
-            }
+    /**
+     * @param Application $app
+     * @param SilexApplicationHandlerSet $handlerset
+     */
+    public function addHandlerSetToApplication (Application $app, SilexApplicationHandlerSet $handlerset) {
+
+        $route = $handlerset->getRoute();
+
+        foreach ($handlerset as $handler) {
+            /** @var SilexApplicationHandler $handler $method */
+
+            $method = $handler->getMethod();
+            $callback = $handler->getHandler();
+
+            call_user_func_array([$app, $method], [$route, $callback]);
         }
 
         $this->addJsonParser($app);
     }
 
 
+    /**
+     * Adds a listener to decode json body requests
+     * @param Application $app
+     */
     protected function addJsonParser (Application $app) {
-        $app->before(function (Request $request) {
-            if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
-                $data = json_decode($request->getContent(), true);
-                $request->request->replace(is_array($data) ? $data : array());
-            }
-        });
+
+        if (!isset($app['jsonParserAdded']) || false === $app['jsonParserAdded']) {
+
+            $app->before(function (Request $request) {
+                if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
+                    $data = json_decode($request->getContent(), true);
+                    $request->request->replace(is_array($data) ? $data : array());
+                }
+            });
+            $app['jsonParserAdded'] = true;
+        }
     }
 
     /**
