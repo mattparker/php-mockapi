@@ -51,6 +51,8 @@ class SilexApplicationGenerator {
             $this->addHandlerSetToApplication($app, $handlerset);
         }
 
+        $this->addApiAddedRoute($app);
+
         $this->addJsonParser($app);
 
     }
@@ -67,7 +69,7 @@ class SilexApplicationGenerator {
         foreach ($handlerset as $handler) {
             /** @var SilexApplicationHandler $handler $method */
 
-            $method = $handler->getMethod();
+            $method = strtolower($handler->getMethod());
             $callback = $handler->getHandler();
 
             call_user_func_array([$app, $method], [$route, $callback]);
@@ -100,5 +102,26 @@ class SilexApplicationGenerator {
      */
     protected function addHandlers (SilexApplicationHandlerSet $handler) {
         $this->handlers[] = $handler;
+    }
+
+    /**
+     * @param Application $app
+     */
+    protected function addApiAddedRoute(Application $app)
+    {
+        if ($app['session']) {
+            $added_routes = $app['session']->get('added_route');
+            if ($added_routes) {
+                foreach ($added_routes as $route_name => $details) {
+
+                    $added_handler_set = new SilexApplicationHandlerSet($route_name, $details);
+                    $this->addHandlerSetToApplication($app, $added_handler_set);
+
+
+                }
+                $app['session']->set('added_route', null);
+
+            }
+        }
     }
 } 

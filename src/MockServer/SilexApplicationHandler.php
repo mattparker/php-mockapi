@@ -65,7 +65,6 @@ class SilexApplicationHandler {
             $http_response_code = 200;
             $http_response_body = '';
 
-
             foreach ($definitions as $defn) {
 
                 $paramsMatched = $parent->doParamsMatch($request, $parent->extractFromArray($defn, 'params', []));
@@ -118,15 +117,11 @@ class SilexApplicationHandler {
 
         $request_params = $request_param_bag->all();
 
-        if (count($params) !== count($request_params)) {
-            return false;
-        }
 
-        if (count(array_diff_assoc($params, $request_params)) === 0 &&
-            count(array_diff_assoc($request_params, $params)) === 0) {
-            return true;
-        }
-        return false;
+        $ret = array_same_recursive($request_params, $params);
+
+        return $ret;
+
 
     }
 
@@ -180,4 +175,45 @@ class SilexApplicationHandler {
 
     }
 
+}
+
+
+if (!function_exists('array_same_recursive')) {
+
+    /**
+     * @param array $arr1
+     * @param array $arr2
+     * @return bool
+     * @throws \Exception
+     */
+    function array_same_recursive (array $arr1 = array(), array $arr2 = array()) {
+
+        //error_log(var_export($arr1, true));error_log(var_export($arr2, true));
+        if (count($arr1) !== count($arr2)) {
+            return false;
+        }
+
+        foreach ($arr1 as $k1 => $v1) {
+            if (!array_key_exists($k1, $arr2)) {
+                return false;
+            }
+            $v2 = $arr2[$k1];
+            if (is_object($v1) || is_object($v2)) {
+                throw new \Exception("Cannot compare objects right now");
+            }
+
+            if (!is_array($v1) && $v1 != $v2) {
+                return false;
+
+            } else if (is_array($v1) && is_array($v2)) {
+                if (array_same_recursive($v1, $v2) === false) {
+                    return false;
+                }
+
+            }
+
+        }
+
+        return true;
+    };
 }

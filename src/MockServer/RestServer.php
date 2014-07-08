@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Silex\Provider\TwigServiceProvider;
 
+
 /**
  * Class RestServer
  *
@@ -152,7 +153,6 @@ class RestServer {
                 $resp = ['data' => $resp];
             }
             return $this->app['twig']->render('mockserver/' . $template . '.twig', $resp);
-            return new Response(var_export($resp, true), $response_code);
 
         };
 
@@ -173,8 +173,15 @@ class RestServer {
 
         $add_function = function (Application $app, Request $request) {
 
-            $route_info = $request->request;
+            $route_info = $request->request->all();
+            $app['session']->set('added_route', $route_info);
+
+/*            $parser = new Parser($route_info);
+            $appCreator = $parser->parse();
+            $appCreator->create($app);
+*/
             foreach ($route_info as $route_name => $details) {
+
                 $handler_set = new SilexApplicationHandlerSet($route_name, $details);
                 $app_generator = new SilexApplicationGenerator([$handler_set]);
                 $app_generator->create($app);
