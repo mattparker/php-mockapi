@@ -134,7 +134,13 @@ class RestServer {
 
         $show_function = function (Application $app, Request $request, $id) use ($data_store) {
 
-            $resp = $data_store->fetch($id);
+            $useLog = false;
+            if ($request->query->get('log') == "1") {
+                $useLog = true;
+            }
+
+
+            $resp = $data_store->fetch($id, $useLog);
             $response_code = 200;
 
             if (!in_array($id, ['all', 'last']) && count($resp) === 0) {

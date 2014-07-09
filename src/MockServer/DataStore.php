@@ -40,15 +40,23 @@ class DataStore {
         $current[] = $data;
         file_put_contents($this->filelocation, serialize($current));
 
+        $current = unserialize(file_get_contents($this->filelocation . '.log'));
+        $current[] = $data;
+        file_put_contents($this->filelocation . '.log', serialize($current));
     }
 
 
     /**
      * @param null $location
+     * @param bool $log
      * @return array
      */
-    public function fetch ($location = null) {
-        $data = unserialize(file_get_contents($this->filelocation));
+    public function fetch ($location = null, $log = false) {
+        $filelocation = $this->filelocation;
+        if ($log === true) {
+            $filelocation .= '.log';
+        }
+        $data = unserialize(file_get_contents($filelocation));
         $resp = [];
 
         if ($location === 'last') {
