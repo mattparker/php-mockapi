@@ -99,6 +99,10 @@ class MockServerTest extends WebTestCase {
 
 
     public function test_we_can_retrieve_requests () {
+
+        // clear out .log of all requests
+        file_put_contents(__DIR__ . '/testrequests.txt.log', '');
+
         $client = $this->createClient();
         $client->request('GET', '/index');
         $client->request('GET', "/testing/params?a=2");
@@ -146,6 +150,11 @@ class MockServerTest extends WebTestCase {
         $client->request('GET', '/__mockserver/show/all', [], [], ['CONTENT_TYPE' => 'application/json']);
         $all_arr = json_decode($client->getResponse()->getContent());
         $this->assertEquals(0, count($all_arr));
+
+        // but theck that there's still some in the ?log=1
+        $client->request('GET', '/__mockserver/show/all?log=1', [], [], ['CONTENT_TYPE' => 'application/json']);
+        $all_items = json_decode($client->getResponse()->getContent());
+        $this->assertEquals(4, count($all_items));
     }
 
 
