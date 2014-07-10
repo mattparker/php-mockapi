@@ -59,7 +59,7 @@ class DataStore {
         $data = unserialize(file_get_contents($filelocation));
         $resp = [];
 
-        if ($location === 'last') {
+        if ($location === 'last' && count($data) > 0) {
             $resp = $data[count($data) -1];
         } else if ($location === 'all') {
             $resp = $data;
