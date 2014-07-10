@@ -19,7 +19,9 @@ class MockServerTest extends WebTestCase {
         file_put_contents(__DIR__ . '/testrequests.txt', '');
 
         // These are the test files server definition files:
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $default_definition_file = __DIR__ . '/testserver.json';
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $default_datafile = __DIR__ . '/testrequests.txt';
         $ret = require __DIR__ . '/../../app.php';
 
