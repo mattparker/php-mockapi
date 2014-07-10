@@ -28,7 +28,11 @@ class DataStore {
      * @param $filelocation
      */
     public function __construct ($filelocation) {
+
         $this->filelocation = $filelocation;
+
+        $this->createLogFilesIfTheyDoNotExist($filelocation);
+
     }
 
 
@@ -36,13 +40,8 @@ class DataStore {
      * @param $data
      */
     public function append ($data) {
-        $current = unserialize(file_get_contents($this->filelocation));
-        $current[] = $data;
-        file_put_contents($this->filelocation, serialize($current));
-
-        $current = unserialize(file_get_contents($this->filelocation . '.log'));
-        $current[] = $data;
-        file_put_contents($this->filelocation . '.log', serialize($current));
+        $this->writeData($this->filelocation, $data);
+        $this->writeData($this->filelocation . '.log', $data);
     }
 
 
@@ -75,7 +74,33 @@ class DataStore {
     /**
      * Clears out all existing data (and puts an empty array in)
      */
-    public function clear () {
-        file_put_contents($this->filelocation, serialize([]));
+    public function clear ($filename = '') {
+        if (!$filename) {
+            $filename = $this->filelocation;
+        }
+        file_put_contents($filename, serialize([]));
+    }
+
+    /**
+     * @param $filelocation
+     */
+    protected function createLogFilesIfTheyDoNotExist ($filelocation) {
+        if (!file_exists($filelocation)) {
+            $this->clear();
+        }
+        if (!file_exists($filelocation . '.log')) {
+            $this->clear($filelocation . '.log');
+        }
+    }
+
+    /**
+     * @param $filelocation
+     * @param $data
+     * @return array|mixed
+     */
+    protected function writeData ($filelocation, $data) {
+        $current = unserialize(file_get_contents($filelocation));
+        $current[] = $data;
+        file_put_contents($filelocation, serialize($current));
     }
 } 
