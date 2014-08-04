@@ -23,7 +23,7 @@ It's kind-of inspired by MailCatcher (which is super).
 
 ### Dependencies
 
-This uses (Silex)[http://silex.sensiolabs.org].  Install it with composer.  And you'll need
+This uses [Silex](http://silex.sensiolabs.org).  Install it with composer.  And you'll need
 php 5.4 for the webserver and other bits and bobs.
 
 
@@ -122,14 +122,14 @@ on whatever port.
 
 ### Point your application at the local server
 
-That's up to you.  Hostnames might work?
+That's up to you.  Hostnames might work, or a suitable config setting for the testing environment.
 
 
 ## Retrieving request/responses
 
 There's a simple API that'll let you retrieve your requests and responses to the server.  Obviously
 you'll need to use the same hostname:port that you use when you started the php server.  If the
- API you're mocking has a route /__mockserver/ then you'll be in a bit of trouble and may have to
+ API you're mocking has a route `/__mockserver/` then you'll be in a bit of trouble and may have to
 hack this a bit to remove the conflict.
 
 
@@ -144,9 +144,9 @@ a more efficient storage solution.
 
 Retrieves one or all requests/responses.  {id} may be:
 
- - all  Gets them all
- - last Gives the last request/response received
- - *i* An integer: gives a single request/response object
+ - `all`  Gets them all
+ - `last` Gives the last request/response received
+ - *`i`* An integer: gives a single request/response object
 
 As mentioned, the data is stored in an array.  So *i* is the index in the array since you last
 `clear`ed it out.
