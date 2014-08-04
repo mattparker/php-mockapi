@@ -57,10 +57,10 @@ The json file should look something like this:
                         "c": 45
                     },
                     "response": {
-                        "httpcode": 301
+                        "httpcode": 301,
                         "body": {
-                            "an array": "can be provided",
-                            "and": "it will do a json response"
+                            "an object": "can be provided",
+                            "and": "it will send a json response"
                         }
                     }
                 }
@@ -76,7 +76,7 @@ The json file should look something like this:
             "get": [
                 {
                     "params": {
-                        "q": "if it is empty you will get a 200 response with no content"
+                        "q": "if the response is missing you will get a 200 response with no content"
                     }
                 }
             ]
